@@ -56,6 +56,8 @@ export default function RecentProjects() {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover"
+                    width={120}
+                    height={40}
                   />
                 </div>
                 <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between">

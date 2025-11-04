@@ -13,6 +13,8 @@ export default function CTASection() {
                 src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=2070"
                 alt="Professional repair service"
                 className="w-full h-full object-cover"
+                width={120}
+                height={40}
               />
             </div>
             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">

@@ -100,6 +100,8 @@ export default function Testimonials() {
                   src={testimonials[activeIndex].image}
                   alt={testimonials[activeIndex].name}
                   className="w-32 h-32 md:w-40 md:h-40 rounded-lg object-cover"
+                  width={120}
+                  height={40}
                 />
               </div>
               <div className="flex-1">
