@@ -3,11 +3,14 @@ export default function AboutUs() {
     <section id="about" className="py-8 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-start gap-4 md:gap-8 mb-12">
-          <div className="w-2 h-2 bg-[var(--primary)] rounded-full mt-2 flex-shrink-0"></div>
           <div className="flex-1">
-            <h2 className="text-gray-600 text-sm md:text-base font-medium mb-4">
-              About Us
-            </h2>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-2 h-2 bg-[var(--primary)] rounded-full flex-shrink-0"></div>
+
+              <h2 className="text-gray-600 text-sm md:text-base font-medium">
+                About Us
+              </h2>
+            </div>
             <p className="text-gray-800 text-base md:text-lg lg:text-xl leading-relaxed mb-8 max-w-4xl">
               With over six years of experience in the construction and
               renovation industry, RSA Improvement has established itself as a
@@ -18,7 +21,7 @@ export default function AboutUs() {
               service, helping our clients bring their visions to life.
             </p>
 
-            <button className="bg-[var(--primary)] text-white px-6 py-3 rounded-lg font-bold hover:bg-[var(--secondary)] transition-colors mb-12">
+            <button className="bg-[var(--primary)] text-white px-6 py-3 rounded-lg font-bold hover:bg-[var(--secondary)] transition-colors mb-12 cursor-pointer">
               Learn More
             </button>
 
@@ -30,7 +33,7 @@ export default function AboutUs() {
                   <div className="w-10 h-10 rounded-full bg-gray-500 border-2 border-white"></div>
                 </div>
                 <p className="text-gray-700 text-sm md:text-base">
-                  4.9/5 Average Rating from 1,500+ homeowners
+                  4.9/5 Average Rating from 800+ homeowners
                 </p>
               </div>
             </div>

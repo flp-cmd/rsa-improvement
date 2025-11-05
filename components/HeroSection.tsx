@@ -67,8 +67,7 @@ export default function HeroSection() {
       id="home"
       className="relative min-h-screen flex items-center pt-20 md:pt-24 bg-gray-50"
       style={{
-        backgroundImage:
-          "url(https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070)",
+        backgroundImage: "url('/flooring.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -79,9 +78,11 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="text-white lg:text-black lg:bg-white/0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Transforming spaces,
+              <span className="text-[var(--bright)]">Transforming</span>{" "}
+              <span className="text-white">spaces,</span>
               <br />
-              exceeding expectations.
+              <span className="text-[var(--bright)]">exceeding</span>{" "}
+              <span className="text-white">expectations.</span>
             </h1>
           </div>
 
