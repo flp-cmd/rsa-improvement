@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutUs() {
   return (
     <section id="about" className="py-8 md:py-24 bg-white">
@@ -20,10 +22,11 @@ export default function AboutUs() {
               dedicated to providing exceptional craftsmanship and personalized
               service, helping our clients bring their visions to life.
             </p>
-
-            <button className="bg-[var(--primary)] text-white px-6 py-3 rounded-lg font-bold hover:bg-[var(--secondary)] transition-colors mb-12 cursor-pointer">
-              Learn More
-            </button>
+            <Link href="#whyRSA">
+              <button className="bg-[var(--primary)] text-white px-6 py-3 rounded-lg font-bold hover:bg-[var(--secondary)] transition-colors mb-12 cursor-pointer">
+                Learn More
+              </button>
+            </Link>
 
             <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12 mb-12">
               <div className="flex items-center gap-3">

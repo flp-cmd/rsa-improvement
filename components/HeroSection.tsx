@@ -87,7 +87,7 @@ export default function HeroSection() {
           </div>
 
           <div className="w-full">
-            <div className="bg-[var(--primary)] rounded-lg p-6 md:p-8">
+            <div className="bg-[var(--primary)] rounded-4xl p-6 md:p-8">
               <h2 className="text-white text-2xl md:text-3xl font-bold text-center mb-2">
                 Get a Quote
               </h2>

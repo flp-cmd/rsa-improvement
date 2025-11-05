@@ -7,25 +7,29 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Do you offer warranties?",
-      answer: "",
-    },
-    {
-      question: "What payment methods do you accept?",
-      answer: "",
-    },
-    {
-      question: "How quickly can I book a service?",
-      answer: "",
-    },
-    {
-      question: "Are your technicians certified?",
+      question: "What areas does RSA Improvement serve?",
       answer:
-        "Absolutely! All our professionals are fully trained, certified, and equipped with the right tools and expertise to handle every repair with the highest level of safety, and care. Each team member is committed to delivering quality work, clear communication, and reliable results for your satisfaction.",
+        "We proudly serve the entire tri-state area, including New York, New Jersey, and Connecticut. If you're outside these regions, contact us — we often travel for larger renovation projects.",
     },
     {
-      question: "Do you provide emergency repair services?",
-      answer: "",
+      question: "Are estimates free?",
+      answer:
+        "Yes! RSA Improvement offers free, no-obligation estimates for all our services. We'll visit your property, discuss your goals, and provide a detailed quote so you know exactly what to expect.",
+    },
+    {
+      question: "Do you provide both residential and commercial services?",
+      answer:
+        "Absolutely. Our team handles everything from small home improvement jobs to full-scale commercial renovations. Whether it's repainting an office or installing new floors in your home, we bring the same level of professionalism and attention to detail.",
+    },
+    {
+      question: "How long does a typical project take?",
+      answer:
+        "It depends on the size and scope of the work. A single-room painting project can often be completed in one day, while full flooring installations or remodeling projects may take several days. We always provide a clear timeline before starting.",
+    },
+    {
+      question: "Is your work insured and guaranteed?",
+      answer:
+        "Yes. RSA Improvement is fully licensed and insured, and all of our work comes with a satisfaction guarantee. If something isn't right, we'll make it right — your peace of mind is our priority.",
     },
   ];
 
@@ -36,21 +40,21 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-8 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-2 mb-4">
+        <div className="mb-12">
+          <div className="flex items-center gap-2 mb-4">
             <div className="w-2 h-2 bg-[var(--primary)] rounded-full"></div>
             <span className="text-gray-500 text-sm md:text-base">FAQ</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Helpful Information for Homeowners
           </h2>
-          <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-base md:text-lg max-w-2xl">
             Get quick answers to common questions about our home repair
             services.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mr-auto items-start">
           {faqs.map((faq, index) => (
             <div
               key={index}

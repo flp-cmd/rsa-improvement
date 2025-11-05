@@ -27,7 +27,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="bg-[var(--primary)] text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-[var(--secondary)] transition-colors flex-shrink-0"
+                className="cursor-pointer bg-[var(--primary)] text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-[var(--secondary)] transition-colors flex-shrink-0"
               >
                 <svg
                   className="w-5 h-5"

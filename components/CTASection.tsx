@@ -8,11 +8,11 @@ export default function CTASection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             <div className="h-64 md:h-80 lg:h-auto">
               <Image
-                src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=2070"
+                src="/flooring.jpg"
                 alt="Professional repair service"
                 className="w-full h-full object-cover"
-                width={120}
-                height={40}
+                width={600}
+                height={400}
               />
             </div>
             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
@@ -24,7 +24,7 @@ export default function CTASection() {
                 care, efficiency, and reliable results — so you can sit back and
                 relax.
               </p>
-              <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2 w-full md:w-auto justify-center">
+              <button className="cursor-pointer bg-white text-gray-900 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2 w-full md:w-auto justify-center">
                 Request a Free Quote
                 <svg
                   className="w-5 h-5"

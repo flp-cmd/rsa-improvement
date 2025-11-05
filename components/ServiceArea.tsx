@@ -27,25 +27,19 @@ export default function ServiceArea() {
               Service Area
             </span>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            <div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                Reliable Home Solutions for Every Neighborhood
-              </h2>
-            </div>
-            <div>
-              <p className="text-gray-600 text-base md:text-lg">
-                Serving homeowners across these areas with reliable,
-                professional repair and maintenance care.
-              </p>
-            </div>
-          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Reliable Home Solutions for Every Neighborhood
+          </h2>
+          <p className="text-gray-600 text-base md:text-lg">
+            Serving homeowners across these areas with reliable, professional
+            repair and maintenance care.
+          </p>
         </div>
 
         <div className="mb-12 relative">
           <div className="bg-gray-100 rounded-lg overflow-hidden h-96 md:h-[500px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799160891!2d-74.25987368715491!3d40.69767006374158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+              src="https://www.google.com/maps/d/embed?mid=1r5Did6UxbJ5ewrFWCDcmVi41jsSYCwk&ehbc=2E312F"
               width="100%"
               height="100%"
               style={{ border: 0 }}

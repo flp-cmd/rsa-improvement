@@ -20,7 +20,8 @@ export default function Services() {
       description:
         "Expert flooring installation and repair services for hardwood, engineered flooring, laminate, and luxury vinyl (LVP/LVT). We deliver precise, high-quality results for residential and commercial spaces using premium materials and modern techniques. Count on our skilled team for durable, elegant, and functional floors that transform your space with lasting beauty.",
       category: "Flooring Services",
-      highlighted: false,
+      image: "/flooring.jpg",
+      highlighted: true,
     },
     {
       number: "02",
@@ -29,8 +30,6 @@ export default function Services() {
         "Revitalize your hardwood floors with our expert finishing and refinishing services. We sand, stain, and seal with precision to restore beauty, enhance durability, and match your desired style. Whether refreshing worn floors or protecting new ones, our team delivers smooth, long-lasting, and elegant results that elevate any space.",
       category: "Flooring Services",
       highlighted: false,
-      image:
-        "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=2070",
       tags: ["Licensed Experts", "Water-Saving Solutions", "2+"],
     },
     {

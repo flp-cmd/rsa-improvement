@@ -9,8 +9,7 @@ export default function RecentProjects() {
       tags: ["Air Flow Optimization", "Licensed Experts", "2+"],
       year: "2035",
       location: "Los Angeles, CA",
-      image:
-        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070",
+      image: "/flooring.jpg",
     },
     {
       title: "Kitchen Water Tap Replacement & Leak Fix",
@@ -19,16 +18,15 @@ export default function RecentProjects() {
       tags: ["Water-Saving Solutions", "Licensed Experts", "2+"],
       year: "2035",
       location: "New York, NY",
-      image:
-        "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=2070",
+      image: "/flooring.jpg",
     },
   ];
 
   return (
     <section id="projects" className="py-8 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-2 mb-4">
+        <div className=" mb-12">
+          <div className="flex items-center gap-2 mb-4">
             <div className="w-2 h-2 bg-[var(--primary)] rounded-full"></div>
             <span className="text-gray-500 text-sm md:text-base">
               Our Projects
@@ -37,14 +35,14 @@ export default function RecentProjects() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Recent Projects in Action
           </h2>
-          <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-base md:text-lg max-w-2xl">
             {
               "Take a look at how we've been helping homeowners create safer, more comfortable spaces."
             }
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -56,8 +54,8 @@ export default function RecentProjects() {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover"
-                    width={120}
-                    height={40}
+                    width={800}
+                    height={600}
                   />
                 </div>
                 <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
