@@ -8,37 +8,61 @@ export default function Services() {
 
   const filters = [
     "All",
-    "Outdoor Maintenance",
+    "Flooring Services",
     "Indoor Repairs",
-    "Specialized Services",
+    "Custom & Finishing Work",
   ];
 
   const services = [
     {
       number: "01",
-      title: "Electrical Services",
+      title: "Flooring Installation/Repairs",
       description:
-        "Safe and efficient solutions for wiring, lighting, and outlet repairs. Our certified electricians ensure reliable performance and lasting safety in every home.",
-      category: "Indoor Repairs",
+        "Expert flooring installation and repair services for hardwood, engineered flooring, laminate, and luxury vinyl (LVP/LVT). We deliver precise, high-quality results for residential and commercial spaces using premium materials and modern techniques. Count on our skilled team for durable, elegant, and functional floors that transform your space with lasting beauty.",
+      category: "Flooring Services",
       highlighted: false,
     },
     {
       number: "02",
-      title: "Plumbing Repairs",
+      title: "Finish/Refinish",
       description:
-        "From leaky faucets to pipe issues, our plumbers deliver quick, reliable fixes that keep your water systems running smoothly.",
-      category: "Indoor Repairs",
-      highlighted: true,
+        "Revitalize your hardwood floors with our expert finishing and refinishing services. We sand, stain, and seal with precision to restore beauty, enhance durability, and match your desired style. Whether refreshing worn floors or protecting new ones, our team delivers smooth, long-lasting, and elegant results that elevate any space.",
+      category: "Flooring Services",
+      highlighted: false,
       image:
         "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=2070",
       tags: ["Licensed Experts", "Water-Saving Solutions", "2+"],
     },
     {
       number: "03",
-      title: "Painting & Finishing",
+      title: "Modifications",
       description:
-        "Transform your interiors with smooth finishes and premium materials. We deliver vibrant colors and durable results that refresh your space beautifully.",
+        "Enhance your space with our non-structural modification services. From room reconfigurations and partitions to new fixtures and cabinetry, we deliver efficient, detail-focused upgrades that improve functionality and style. Our team ensures precise, high-quality results that elevate your home or business without altering its structural integrity.",
       category: "Indoor Repairs",
+      highlighted: false,
+    },
+    {
+      number: "04",
+      title: "Painting",
+      description:
+        "Refresh your home or business with our professional painting services. We use high-quality paints and expert techniques to deliver smooth, durable finishes for both interiors and exteriors. From prep to clean-up, every detail is handled with care and precision, ensuring efficient, long-lasting, and visually stunning results that transform your space.",
+      category: "Indoor Repairs",
+      highlighted: false,
+    },
+    {
+      number: "05",
+      title: "Drywall",
+      description:
+        "Achieve smooth, flawless walls with our expert drywall and plaster services. From new installations to precise repairs, our skilled team ensures seamless, durable finishes ready for painting or decoration. With attention to detail and high-quality craftsmanship, we deliver polished walls and ceilings that enhance the beauty and longevity of your home or business.",
+      category: "Indoor Repairs",
+      highlighted: false,
+    },
+    {
+      number: "06",
+      title: "Other Services",
+      description:
+        "In addition to our core services, we offer a variety of finishing and custom carpentry solutions, including trim work, baseboard installation, and crown molding. Our experienced team delivers exceptional craftsmanship and attention to detail, enhancing both the beauty and functionality of your space. We focus on efficient, high-quality results that create visually appealing, practical, and comfortable environments for your home or business.",
+      category: "Custom & Finishing Work",
       highlighted: false,
     },
   ];
@@ -88,7 +112,7 @@ export default function Services() {
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <div className="flex flex-col md:flex-row">
                     {service.image && (
-                      <div className="w-full md:w-1/2 h-64 md:h-auto">
+                      <div className="w-full md:w-1/2 h-64 md:h-80">
                         <Image
                           src={service.image}
                           alt={service.title}
