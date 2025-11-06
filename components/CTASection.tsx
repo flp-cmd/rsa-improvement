@@ -24,8 +24,8 @@ export default function CTASection() {
                 care, efficiency, and reliable results — so you can sit back and
                 relax.
               </p>
-              <button className="cursor-pointer bg-white text-gray-900 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2 w-full md:w-auto justify-center">
-                Request a Free Quote
+              <a href="#home" className="cursor-pointer bg-white text-gray-900 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2 w-full md:w-auto justify-center">
+                Get a Free Quote
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -39,7 +39,7 @@ export default function CTASection() {
                     d="M13 7l5 5m0 0l-5 5m5-5H6"
                   />
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </div>

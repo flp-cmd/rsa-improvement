@@ -18,7 +18,7 @@ export default function ServiceArea() {
   ];
 
   return (
-    <section id="contact" className="py-8 md:py-24 bg-white">
+    <section id="service-area" className="py-8 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
@@ -62,21 +62,6 @@ export default function ServiceArea() {
                 <p className="text-gray-600 text-sm">{location.address}</p>
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-20">
-          <div>
-            <p className="text-gray-500 text-sm mb-2">Phone</p>
-            <p className="text-xl md:text-2xl font-bold text-gray-900">
-              (862) 237-4628
-            </p>
-          </div>
-          <div>
-            <p className="text-gray-500 text-sm mb-2">Email</p>
-            <p className="text-xl md:text-2xl font-bold text-gray-900">
-              contact@repaira.com
-            </p>
           </div>
         </div>
       </div>

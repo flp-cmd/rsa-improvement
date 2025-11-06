@@ -1,61 +1,28 @@
-"use client";
-
 import Link from "next/link";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaPhone,
+  FaEnvelope,
+  FaClock,
+} from "react-icons/fa";
 
 export default function Footer() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  };
-
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 mb-12">
-          <div className="lg:col-span-2">
-            <h3 className="text-xl font-bold mb-4">
-              Stay updated with repair tips, seasonal offers, and special
-              discounts.
-            </h3>
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-3 mb-4"
-            >
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
-              />
-              <button
-                type="submit"
-                className="cursor-pointer bg-[var(--primary)] text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-[var(--secondary)] transition-colors flex-shrink-0"
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </button>
-            </form>
-            <div className="flex items-center gap-2">
-              <input type="checkbox" id="privacy" className="w-4 h-4" />
-              <label htmlFor="privacy" className="text-sm text-gray-400">
-                I agree to the{" "}
-                <Link href="#" className="underline hover:text-white">
-                  privacy statement
-                </Link>
-              </label>
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-12 mb-10">
+          <div className="flex flex-col">
+            <p className="text-[var(--secondary)] text-2xl font-semibold">
+              RSA IMPROVEMENT
+            </p>
+            <p className="text-gray-400 mt-2">
+              At RSA Improvement, we understand the importance of having a
+              beautiful and well-maintained home.
+            </p>
           </div>
 
-          <div>
+          <div className="flex flex-col">
             <h4 className="font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
@@ -84,7 +51,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#contact"
+                  href="#service-area"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Service Area
@@ -93,59 +60,51 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-bold mb-4">Support</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#about"
+          <div className="flex flex-col">
+            <h4 className="font-bold mb-4">Contact Info</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <FaPhone className="w-5 h-5 text-[var(--primary)] mt-1 flex-shrink-0" />
+                <a
+                  href="tel:+18622374628"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  About Us
-                </Link>
+                  (862) 237-4628
+                </a>
               </li>
-              <li>
-                <Link
-                  href="#contact"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Contact
-                </Link>
+              <li className="flex items-start gap-3">
+                <FaEnvelope className="w-5 h-5 text-[var(--primary)] mt-1 flex-shrink-0" />
+                <span className="text-gray-400 break-words">
+                  contact@rsaimprovement.com
+                </span>
               </li>
-              <li>
-                <Link
-                  href="#faq"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  FAQ
-                </Link>
+              <li className="flex items-start gap-3">
+                <FaClock className="w-5 h-5 text-[var(--primary)] mt-1 flex-shrink-0" />
+                <span className="text-gray-400">Mon-Sat: 8:00AM-5:00PM</span>
               </li>
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-bold mb-4">Get In Touch</h4>
+          <div className="flex flex-col lg:ml-12">
+            <h4 className="font-bold mb-4">Follow Our Socials</h4>
             <div className="flex gap-3">
               <a
-                href="#"
-                className="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors"
+                href="https://web.facebook.com/rsaimprovement?_rdc=1&_rdr#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
                 aria-label="Facebook"
               >
-                <span className="text-sm font-bold">FB</span>
+                <FaFacebook size={25} />
               </a>
               <a
-                href="#"
-                className="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors"
+                href="https://www.instagram.com/rsaimprovement/#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
                 aria-label="Instagram"
               >
-                <span className="text-sm font-bold">IG</span>
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors"
-                aria-label="Twitter"
-              >
-                <span className="text-sm font-bold">X</span>
+                <FaInstagram size={25} />
               </a>
             </div>
           </div>
