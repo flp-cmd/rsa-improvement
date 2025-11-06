@@ -27,7 +27,7 @@ export default function RecentProjects() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-12">
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-2 h-2 bg-[var(--primary)] rounded-full"></div>
+            <div className="w-2 h-2 bg-[var(--harvest-gold)] rounded-full"></div>
             <span className="text-gray-500 text-sm md:text-base">
               Our Projects
             </span>
@@ -86,7 +86,7 @@ export default function RecentProjects() {
                       </div>
                     </div>
                   </div>
-                  <button className="bg-[var(--primary)] text-white px-6 py-3 rounded-lg font-bold hover:bg-[var(--secondary)] transition-colors w-full md:w-auto">
+                  <button className="bg-[var(--harvest-gold)] text-white px-6 py-3 rounded-lg font-bold hover:bg-[var(--harvest-gold-hover)] transition-colors w-full md:w-auto">
                     See Details
                   </button>
                 </div>

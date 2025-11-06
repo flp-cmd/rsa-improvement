@@ -7,7 +7,7 @@ export default function AboutUs() {
         <div className="flex items-start gap-4 md:gap-8 mb-12">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-2 h-2 bg-[var(--primary)] rounded-full flex-shrink-0"></div>
+              <div className="w-2 h-2 bg-[var(--harvest-gold)] rounded-full flex-shrink-0"></div>
 
               <h2 className="text-gray-600 text-sm md:text-base font-medium">
                 About Us
@@ -23,7 +23,7 @@ export default function AboutUs() {
               service, helping our clients bring their visions to life.
             </p>
             <Link href="#whyRSA">
-              <button className="bg-[var(--primary)] text-white px-6 py-3 rounded-lg font-bold hover:bg-[var(--secondary)] transition-colors mb-12 cursor-pointer">
+              <button className="bg-[var(--harvest-gold)] text-white px-6 py-3 rounded-lg font-bold hover:bg-[var(--harvest-gold-hover)] transition-colors mb-12 cursor-pointer">
                 Learn More
               </button>
             </Link>

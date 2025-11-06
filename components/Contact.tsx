@@ -27,7 +27,7 @@ export default function Contact() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-2 h-2 bg-[var(--primary)] rounded-full"></div>
+            <div className="w-2 h-2 bg-[var(--harvest-gold)] rounded-full"></div>
             <span className="text-gray-500 text-sm md:text-base">Contact</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -44,14 +44,14 @@ export default function Contact() {
               key={index}
               className="bg-white rounded-lg shadow-md p-6 md:p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-12 h-12 bg-[var(--primary)] rounded-full flex items-center justify-center text-white mb-4">
+              <div className="w-12 h-12 bg-[var(--harvest-gold)] rounded-full flex items-center justify-center text-white mb-4">
                 {item.icon}
               </div>
               <p className="text-gray-500 text-sm mb-2">{item.label}</p>
               {item.link ? (
                 <a
                   href={item.link}
-                  className="text-xl md:text-2xl font-bold text-gray-900 hover:text-[var(--primary)] transition-colors"
+                  className="text-xl md:text-2xl font-bold text-gray-900 hover:text-[var(--harvest-gold)] transition-colors"
                 >
                   {item.value}
                 </a>

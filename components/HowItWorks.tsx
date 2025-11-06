@@ -45,7 +45,7 @@ export default function HowItWorks() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-2 h-2 bg-[var(--primary)] rounded-full"></div>
+              <div className="w-2 h-2 bg-[var(--harvest-gold)] rounded-full"></div>
               <span className="text-gray-500 text-sm md:text-base">
                 How It Works
               </span>
@@ -72,7 +72,7 @@ export default function HowItWorks() {
                 href="https://wa.me/18622374628"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[var(--primary)] text-white px-6 py-3 rounded-full font-bold hover:bg-[var(--secondary)] transition-colors inline-flex items-center justify-center gap-2 w-35 md:w-auto"
+                className="bg-[var(--harvest-gold)] text-white px-6 py-3 rounded-full font-bold hover:bg-[var(--harvest-gold-hover)] transition-colors inline-flex items-center justify-center gap-2 w-35 md:w-auto"
               >
                 <FaPhone className="w-4 h-4" />
                 <span>Call Us</span>
@@ -87,7 +87,7 @@ export default function HowItWorks() {
                   <div
                     className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center font-bold text-sm md:text-base ${
                       step.highlighted
-                        ? "bg-[var(--primary)] text-white"
+                        ? "bg-[var(--harvest-gold)] text-white"
                         : "bg-gray-100 text-gray-700"
                     }`}
                   >

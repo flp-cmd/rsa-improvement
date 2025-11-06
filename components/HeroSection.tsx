@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import "animate.css";
 
 export default function HeroSection() {
   const [result, setResult] = useState("");
@@ -65,39 +66,40 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-20 md:pt-24 bg-gray-50"
-      style={{
-        backgroundImage: "url('/flooring.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="relative min-h-screen pt-20 md:pt-20 bg-gray-50"
     >
-      <div className="absolute inset-0 bg-black/50 lg:bg-black/30"></div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="text-white lg:text-black lg:bg-white/0">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              <span className="text-[var(--bright)]">Transforming</span>{" "}
-              <span className="text-white">spaces,</span>
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+        <div className="relative">
+          <div className="pt-8 pb-4 text-center md:text-start md:pb-0 relative z-10">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+              <span className="text-[var(--modern-green)] font-black">
+                Transforming
+              </span>{" "}
+              <span className="text-[var(--modern-black)] font-bold">
+                spaces,
+              </span>
               <br />
-              <span className="text-[var(--bright)]">exceeding</span>{" "}
-              <span className="text-white">expectations.</span>
+              <span className="text-[var(--modern-green)] font-black">
+                exceeding
+              </span>{" "}
+              <span className="text-[var(--modern-black)] font-bold">
+                expectations.
+              </span>
             </h1>
           </div>
 
-          <div className="w-full">
-            <div className="bg-[var(--primary)] rounded-4xl p-6 md:p-8">
-              <h2 className="text-white text-2xl md:text-3xl font-bold text-center mb-2">
+          <div className="relative md:absolute md:top-35 md:right-6 lg:top-50 xl:top-8 xl:right-10 w-full md:w-[400px] lg:w-[400px] xl:w-[450px] mt-8 lg:mt-0 z-20">
+            <div className="bg-[var(--harvest-gold)] rounded-4xl p-6 md:p-8 animate__animated animate__bounceInDown">
+              <h2 className="text-[var(--modern-black)] text-2xl md:text-4xl font-extrabold text-center mb-2">
                 Get a Free Quote
               </h2>
-              <p className="text-white text-center mb-6 text-sm md:text-base">
+              <p className="text-[var(--modern-black)] text-center mb-6 text-sm md:text-xl">
                 Reliable, affordable home services you can count on.
               </p>
 
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-white text-sm mb-2">
+                  <label className="block text-[var(--modern-black)] text-sm mb-2">
                     Full Name
                   </label>
                   <input
@@ -110,7 +112,9 @@ export default function HeroSection() {
                 </div>
 
                 <div>
-                  <label className="block text-white text-sm mb-2">Email</label>
+                  <label className="block text-[var(--modern-black)] text-sm mb-2">
+                    Email
+                  </label>
                   <input
                     type="email"
                     name="email"
@@ -121,7 +125,7 @@ export default function HeroSection() {
                 </div>
 
                 <div>
-                  <label className="block text-white text-sm mb-2">
+                  <label className="block text-[var(--modern-black)] text-sm mb-2">
                     Message
                   </label>
                   <textarea
@@ -136,7 +140,7 @@ export default function HeroSection() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full cursor-pointer bg-white text-[var(--primary)] px-6 py-3 rounded-full font-bold hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-1/2 mx-auto block cursor-pointer bg-white text-[var(--modern-black)] px-6 py-3 rounded-full font-bold hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? "Sending..." : "Send Message"}
                 </button>
@@ -152,6 +156,19 @@ export default function HeroSection() {
                   </p>
                 )}
               </form>
+            </div>
+          </div>
+
+          <div className="relative mt-8 md:mt-12">
+            <div
+              className="relative w-full h-[600px] md:h-[600px] lg:h-[600px] rounded-lg overflow-hidden"
+              style={{
+                backgroundImage: "url('/flooring.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="absolute inset-0 bg-black/30"></div>
             </div>
           </div>
         </div>

@@ -19,8 +19,7 @@ export default function Testimonials() {
       location: "Newark, US",
       text: "We've worked with RSA Improvement on multiple rental property renovations, and they've consistently delivered excellent results. From drywall repairs to custom trim work, everything is done efficiently and with care. It's rare to find a company that combines craftsmanship with such great communication. They're our go-to for any maintenance or upgrade projects.",
       date: "May 15, 2024",
-      image:
-        "/front-view-man-working-as-real-estate-agent.jpg",
+      image: "/front-view-man-working-as-real-estate-agent.jpg",
     },
     {
       name: "Maria G, Business Owner",
@@ -37,7 +36,7 @@ export default function Testimonials() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-2 h-2 bg-[var(--primary)] rounded-full"></div>
+            <div className="w-2 h-2 bg-[var(--harvest-gold)] rounded-full"></div>
             <span className="text-gray-500 text-sm md:text-base">
               Testimonial
             </span>
@@ -59,14 +58,16 @@ export default function Testimonials() {
                 onClick={() => setActiveIndex(index)}
                 className={`text-left cursor-pointer p-4 md:p-6 md:pl-4 rounded-lg transition-colors ${
                   activeIndex === index
-                    ? "bg-[var(--primary)] text-white"
+                    ? "bg-[var(--harvest-gold)] text-white"
                     : "bg-gray-50 text-gray-700 hover:bg-gray-200"
                 }`}
               >
                 <div className="flex items-start gap-4">
                   <div
                     className={`w-1 h-12 flex-shrink-0 rounded ${
-                      activeIndex === index ? "bg-white" : "bg-[var(--primary)]"
+                      activeIndex === index
+                        ? "bg-white"
+                        : "bg-[var(--harvest-gold)]"
                     }`}
                   ></div>
                   <div className="flex-1">

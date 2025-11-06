@@ -24,9 +24,9 @@ export default function Header() {
               <Image
                 src="/rsa-improvement-logo.png"
                 alt="RSA Logo"
-                width={120}
-                height={40}
-                className="h-10 md:h-26 w-auto"
+                width={420}
+                height={400}
+                className="h-16 md:h-26 w-auto"
               />
             </a>
           </div>
@@ -61,7 +61,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="#contact"
-              className="hidden md:flex items-center gap-2 bg-[var(--primary)] text-white px-4 py-2 rounded-full hover:bg-[var(--secondary)] transition-colors text-sm md:text-base"
+              className="hidden md:flex items-center gap-2 bg-[var(--harvest-gold)] text-white px-4 py-2 rounded-full hover:bg-[var(--harvest-gold-hover)] transition-colors text-sm md:text-base"
             >
               Contact Us
             </Link>

@@ -3,9 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #b4740c;
-  --secondary: #d89523;
-  --bright: #a76905;
+  --harvest-gold: #b4740c;
+  --harvest-gold-hover: #d89523;
+  --rich-black: #101828;
+  --modern-green: #2c6e49;
+  --modern-black: #101820;
+}
+
+.animate__animated.animate__bounceInDown {
+  --animate-duration: 1.5s;
 }
 
 @media (prefers-color-scheme: dark) {

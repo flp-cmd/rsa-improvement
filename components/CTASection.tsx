@@ -4,7 +4,7 @@ export default function CTASection() {
   return (
     <section className="py-8 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[var(--primary)] rounded-lg overflow-hidden">
+        <div className="bg-[var(--harvest-gold)] rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             <div className="h-64 md:h-80 lg:h-auto">
               <Image
@@ -24,7 +24,10 @@ export default function CTASection() {
                 care, efficiency, and reliable results — so you can sit back and
                 relax.
               </p>
-              <a href="#home" className="cursor-pointer bg-white text-gray-900 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2 w-full md:w-auto justify-center">
+              <a
+                href="#home"
+                className="cursor-pointer bg-white text-gray-900 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2 w-full md:w-auto justify-center"
+              >
                 Get a Free Quote
                 <svg
                   className="w-5 h-5"
