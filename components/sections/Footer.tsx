@@ -9,11 +9,11 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--rich-black)] text-white">
+    <footer className="bg-(--rich-black) text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-12 mb-10">
           <div className="flex flex-col">
-            <p className="text-[var(--harvest-gold-hover)] text-2xl font-semibold">
+            <p className="text-(--harvest-gold-hover) text-2xl font-semibold">
               RSA IMPROVEMENT
             </p>
             <p className="text-gray-400 mt-2">
@@ -64,7 +64,7 @@ export default function Footer() {
             <h4 className="font-bold mb-4">Contact Info</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <FaPhone className="w-5 h-5 text-[var(--harvest-gold)] mt-1 flex-shrink-0" />
+                <FaPhone className="w-5 h-5 text-(--harvest-gold) mt-1 shrink-0" />
                 <a
                   href="tel:+18622374628"
                   className="text-gray-400 hover:text-white transition-colors"
@@ -73,13 +73,13 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <FaEnvelope className="w-5 h-5 text-[var(--harvest-gold)] mt-1 flex-shrink-0" />
-                <span className="text-gray-400 break-words">
+                <FaEnvelope className="w-5 h-5 text-(--harvest-gold) mt-1 shrink-0" />
+                <span className="text-gray-400 wrap-break-word">
                   contact@rsaimprovement.com
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <FaClock className="w-5 h-5 text-[var(--harvest-gold)] mt-1 flex-shrink-0" />
+                <FaClock className="w-5 h-5 text-(--harvest-gold) mt-1 shrink-0" />
                 <span className="text-gray-400">Mon-Sat: 8:00AM-5:00PM</span>
               </li>
             </ul>

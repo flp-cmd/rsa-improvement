@@ -4,7 +4,7 @@ export default function CTASection() {
   return (
     <section className="py-8 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[var(--harvest-gold)] rounded-lg overflow-hidden">
+        <div className="bg-(--harvest-gold) rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             <div className="h-64 md:h-80 lg:h-auto">
               <Image

@@ -195,28 +195,26 @@ export default function HeroSection() {
         <div className="relative">
           <div className="pt-8 pb-4 text-center md:text-start md:pb-0 relative z-10">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-[var(--modern-green)] font-black">
+              <span className="text-(--modern-green) font-black">
                 Transforming
               </span>{" "}
-              <span className="text-[var(--modern-black)] font-bold">
-                spaces,
-              </span>
+              <span className="text-(--modern-black) font-bold">spaces,</span>
               <br />
-              <span className="text-[var(--modern-green)] font-black">
+              <span className="text-(--modern-green) font-black">
                 exceeding
               </span>{" "}
-              <span className="text-[var(--modern-black)] font-bold">
+              <span className="text-(--modern-black) font-bold">
                 expectations.
               </span>
             </h1>
           </div>
 
           <div className="relative md:absolute md:top-35 md:right-6 lg:top-50 xl:top-8 xl:right-10 w-full md:w-[400px] lg:w-[400px] xl:w-[450px] mt-8 lg:mt-0 z-20">
-            <div className="bg-[var(--harvest-gold)] rounded-4xl p-6 md:p-8 animate__animated animate__bounceInDown">
-              <h2 className="text-[var(--modern-black)] text-2xl md:text-4xl font-extrabold text-center mb-2">
+            <div className="bg-(--harvest-gold) rounded-4xl p-6 md:p-8 animate__animated animate__bounceInDown">
+              <h2 className="text-(--modern-black) text-2xl md:text-4xl font-extrabold text-center mb-2">
                 Get a Free Quote
               </h2>
-              <p className="text-[var(--modern-black)] text-center mb-6 text-sm md:text-xl">
+              <p className="text-(--modern-black) text-center mb-6 text-sm md:text-xl">
                 Reliable, affordable home services you can count on.
               </p>
 
@@ -329,7 +327,7 @@ export default function HeroSection() {
                 <button
                   type="submit"
                   disabled={isLoading || !isFormValid}
-                  className="w-1/2 mx-auto block cursor-pointer bg-white text-[var(--modern-black)] px-6 py-3 rounded-full font-bold hover:bg-gray-300 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2 group"
+                  className="w-1/2 mx-auto cursor-pointer bg-white text-(--modern-black) px-6 py-3 rounded-full font-bold hover:bg-gray-300 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2 group"
                 >
                   <span>{isLoading ? "Sending..." : "Send Message"}</span>
                   {!isLoading && (

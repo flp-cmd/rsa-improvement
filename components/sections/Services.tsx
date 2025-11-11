@@ -76,7 +76,7 @@ export default function Services() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-2 h-2 bg-[var(--harvest-gold)] rounded-full"></div>
+            <div className="w-2 h-2 bg-(--harvest-gold) rounded-full"></div>
             <span className="text-gray-500 text-sm md:text-base">Services</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -95,7 +95,7 @@ export default function Services() {
               onClick={() => setActiveFilter(filter)}
               className={`px-4 py-2 rounded-full font-medium transition-colors ${
                 activeFilter === filter
-                  ? "bg-[var(--harvest-gold)] text-white"
+                  ? "bg-(--harvest-gold)] text-white"
                   : "bg-white text-gray-700 border border-gray-300 hover:border-gray-400"
               }`}
             >
@@ -145,7 +145,7 @@ export default function Services() {
                           ))}
                         </div>
                       </div>
-                      <button className="bg-[var(--harvest-gold)] text-white px-6 py-3 rounded-lg font-bold hover:bg-[var(--harvest-gold-hover)] transition-colors w-full md:w-auto">
+                      <button className="bg-(--harvest-gold)] text-white px-6 py-3 rounded-lg font-bold hover:bg-(--harvest-gold-hover)] transition-colors w-full md:w-auto">
                         See Details
                       </button>
                     </div>
@@ -153,7 +153,7 @@ export default function Services() {
                 </div>
               ) : (
                 <div className="flex items-start gap-4 md:gap-6">
-                  <span className="text-2xl md:text-3xl font-bold text-gray-400 flex-shrink-0">
+                  <span className="text-2xl md:text-3xl font-bold text-gray-400 shrink-0">
                     {service.number}
                   </span>
                   <div className="flex-1">

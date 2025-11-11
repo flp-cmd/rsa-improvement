@@ -1,16 +1,16 @@
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import AboutUs from "@/components/AboutUs";
-import HowItWorks from "@/components/HowItWorks";
-import Services from "@/components/Services";
-import RecentProjects from "@/components/RecentProjects";
-import ServiceArea from "@/components/ServiceArea";
-import Contact from "@/components/Contact";
-import Testimonials from "@/components/Testimonials";
-import FAQ from "@/components/FAQ";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
-import WhyRSA from "@/components/WhyRSA";
+import Header from "@/components/sections/Header";
+import HeroSection from "@/components/sections/HeroSection";
+import AboutUs from "@/components/sections/AboutUs";
+import HowItWorks from "@/components/sections/HowItWorks";
+import Services from "@/components/sections/Services";
+import RecentProjects from "@/components/sections/RecentProjects";
+import ServiceArea from "@/components/sections/ServiceArea";
+import Contact from "@/components/sections/Contact";
+import Testimonials from "@/components/sections/Testimonials";
+import FAQ from "@/components/sections/FAQ";
+import CTASection from "@/components/sections/CTASection";
+import Footer from "@/components/sections/Footer";
+import WhyRSA from "@/components/sections/WhyRSA";
 
 export default function Home() {
   return (

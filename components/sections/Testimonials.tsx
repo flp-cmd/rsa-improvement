@@ -36,7 +36,7 @@ export default function Testimonials() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-2 h-2 bg-[var(--harvest-gold)] rounded-full"></div>
+            <div className="w-2 h-2 bg-(--harvest-gold) rounded-full"></div>
             <span className="text-gray-500 text-sm md:text-base">
               Testimonial
             </span>
@@ -58,16 +58,16 @@ export default function Testimonials() {
                 onClick={() => setActiveIndex(index)}
                 className={`text-left cursor-pointer p-4 md:p-6 md:pl-4 rounded-lg transition-colors ${
                   activeIndex === index
-                    ? "bg-[var(--harvest-gold)] text-white"
+                    ? "bg-(--harvest-gold) text-white"
                     : "bg-gray-50 text-gray-700 hover:bg-gray-200"
                 }`}
               >
                 <div className="flex items-start gap-4">
                   <div
-                    className={`w-1 h-12 flex-shrink-0 rounded ${
+                    className={`w-1 h-12 shrink-0 rounded ${
                       activeIndex === index
                         ? "bg-white"
-                        : "bg-[var(--harvest-gold)]"
+                        : "bg-(--harvest-gold)]"
                     }`}
                   ></div>
                   <div className="flex-1">
@@ -95,7 +95,7 @@ export default function Testimonials() {
 
           <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
             <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex-shrink-0">
+              <div className="shrink-0">
                 <Image
                   src={testimonials[activeIndex].image}
                   alt={testimonials[activeIndex].name}

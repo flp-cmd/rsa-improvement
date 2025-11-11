@@ -22,7 +22,7 @@ export default function ServiceArea() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-2 h-2 bg-[var(--harvest-gold)] rounded-full"></div>
+            <div className="w-2 h-2 bg-(--harvest-gold) rounded-full"></div>
             <span className="text-gray-500 text-sm md:text-base">
               Service Area
             </span>

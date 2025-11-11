@@ -1,13 +1,15 @@
 import Link from "next/link";
+import CountUp from "../animations/CountUp";
 
 export default function AboutUs() {
+  const duration = 0.5;
   return (
     <section id="about" className="py-8 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-start gap-4 md:gap-8 mb-12">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-2 h-2 bg-[var(--harvest-gold)] rounded-full flex-shrink-0"></div>
+              <div className="w-2 h-2 bg-(--harvest-gold) rounded-full shrink-0"></div>
 
               <h2 className="text-gray-600 text-sm md:text-base font-medium">
                 About Us
@@ -23,7 +25,7 @@ export default function AboutUs() {
               service, helping our clients bring their visions to life.
             </p>
             <Link href="#whyRSA">
-              <button className="bg-[var(--harvest-gold)] text-white px-6 py-3 rounded-lg font-bold hover:bg-[var(--harvest-gold-hover)] transition-colors mb-12 cursor-pointer">
+              <button className="bg-(--harvest-gold) text-white px-6 py-3 rounded-lg font-bold hover:bg-(--harvest-gold-hover) transition-colors mb-12 cursor-pointer">
                 Learn More
               </button>
             </Link>
@@ -44,7 +46,31 @@ export default function AboutUs() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
               <div className="bg-gray-50 rounded-lg p-6 md:p-8">
                 <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-2">
-                  372+
+                  <CountUp
+                    from={0}
+                    to={6}
+                    separator=","
+                    direction="up"
+                    duration={duration}
+                    className="count-up-text"
+                  />
+                  <span> +</span>
+                </div>
+                <div className="text-gray-600 text-sm md:text-base">
+                  Years of Experience
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-6 md:p-8">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-2">
+                  <CountUp
+                    from={0}
+                    to={372}
+                    separator=","
+                    direction="up"
+                    duration={duration}
+                    className="count-up-text"
+                  />
+                  <span> +</span>
                 </div>
                 <div className="text-gray-600 text-sm md:text-base">
                   Project Completed
@@ -53,16 +79,15 @@ export default function AboutUs() {
 
               <div className="bg-gray-50 rounded-lg p-6 md:p-8">
                 <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-2">
-                  6+
-                </div>
-                <div className="text-gray-600 text-sm md:text-base">
-                  Years of Experience
-                </div>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6 md:p-8">
-                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-2">
-                  800+
+                  <CountUp
+                    from={0}
+                    to={800}
+                    separator=","
+                    direction="up"
+                    duration={duration}
+                    className="count-up-text"
+                  />
+                  <span> +</span>
                 </div>
                 <div className="text-gray-600 text-sm md:text-base">
                   Happy Clients

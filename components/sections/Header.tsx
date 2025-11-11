@@ -61,7 +61,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="#contact"
-              className="hidden md:flex items-center gap-2 bg-[var(--harvest-gold)] text-white px-4 py-2 rounded-full hover:bg-[var(--harvest-gold-hover)] transition-colors text-sm md:text-base"
+              className="hidden md:flex items-center gap-2 bg-(--harvest-gold) text-white px-4 py-2 rounded-full hover:bg-(--harvest-gold-hover) transition-colors text-sm md:text-base"
             >
               Contact Us
             </Link>

@@ -42,7 +42,7 @@ export default function FAQ() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-2 h-2 bg-[var(--harvest-gold)] rounded-full"></div>
+            <div className="w-2 h-2 bg-(--harvest-gold) rounded-full"></div>
             <span className="text-gray-500 text-sm md:text-base">FAQ</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -60,7 +60,7 @@ export default function FAQ() {
               key={index}
               className={`rounded-lg transition-colors ${
                 openIndex === index
-                  ? "bg-[var(--harvest-gold)] text-white"
+                  ? "bg-(--harvest-gold) text-white"
                   : "bg-gray-100 text-gray-900 hover:bg-gray-200"
               }`}
             >
@@ -76,7 +76,7 @@ export default function FAQ() {
                   {faq.question}
                 </span>
                 <span
-                  className={`text-xl md:text-2xl flex-shrink-0 ml-4 ${
+                  className={`text-xl md:text-2xl shrink-0 ml-4 ${
                     openIndex === index ? "text-white" : "text-gray-600"
                   }`}
                 >

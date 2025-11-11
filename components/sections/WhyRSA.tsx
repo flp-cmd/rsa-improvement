@@ -84,7 +84,7 @@ export default function WhyRSA() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-2 h-2 bg-[var(--harvest-gold)] rounded-full"></div>
+              <div className="w-2 h-2 bg-(--harvest-gold) rounded-full"></div>
               <span className="text-gray-500 text-sm md:text-base">
                 Why RSA Improvement
               </span>
@@ -104,7 +104,7 @@ export default function WhyRSA() {
                 key={index}
                 className="bg-white rounded-lg shadow-md p-6 md:p-8 hover:shadow-lg transition-shadow"
               >
-                <div className="w-12 h-12 bg-[var(--harvest-gold)] rounded-full flex items-center justify-center text-white mb-4">
+                <div className="w-12 h-12 bg-(--harvest-gold) rounded-full flex items-center justify-center text-white mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
