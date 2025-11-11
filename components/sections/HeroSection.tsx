@@ -186,6 +186,8 @@ export default function HeroSection() {
     }
   };
 
+  const isSubmitDisabled = isLoading || !isFormValid;
+
   return (
     <section
       id="home"
@@ -326,13 +328,19 @@ export default function HeroSection() {
 
                 <button
                   type="submit"
-                  disabled={isLoading || !isFormValid}
-                  className="w-1/2 mx-auto cursor-pointer bg-white text-(--modern-black) px-6 py-3 rounded-full font-bold hover:bg-gray-300 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2 group"
+                  disabled={isSubmitDisabled}
+                  className={`w-1/2 mx-auto bg-white text-(--modern-black) px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2 ${
+                    isSubmitDisabled
+                      ? "opacity-50 cursor-not-allowed"
+                      : "cursor-pointer hover:bg-gray-300 hover:scale-110 group"
+                  }`}
                 >
                   <span>{isLoading ? "Sending..." : "Send Message"}</span>
                   {!isLoading && (
                     <svg
-                      className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                      className={`w-5 h-5 transition-transform duration-300 ${
+                        isSubmitDisabled ? "" : "group-hover:translate-x-1"
+                      }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

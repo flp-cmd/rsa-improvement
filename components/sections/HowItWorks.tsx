@@ -8,6 +8,7 @@ export default function HowItWorks() {
       description:
         "Share your repair needs through our quick form or give us a call. We'll review your request and guide you to the right service.",
       highlighted: true,
+      accentColor: "--pale-green",
     },
     {
       number: "02",
@@ -15,6 +16,7 @@ export default function HowItWorks() {
       description:
         "Our team provides a clear, upfront estimate so you know exactly what to expect — no hidden costs, just honest pricing.",
       highlighted: true,
+      accentColor: "--pale-blue",
     },
     {
       number: "03",
@@ -22,6 +24,7 @@ export default function HowItWorks() {
       description:
         "Choose a date and time that works best for you, and we'll make sure our team arrives right on schedule.",
       highlighted: true,
+      accentColor: "--mid-blue",
     },
     {
       number: "04",
@@ -61,7 +64,7 @@ export default function HowItWorks() {
               unnecessary stress.
             </p>
 
-            <div className="bg-gray-50 rounded-lg my-8">
+            <div className="rounded-lg my-8">
               <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                 Need some help deciding?
               </h3>
@@ -72,7 +75,7 @@ export default function HowItWorks() {
                 href="https://wa.me/18622374628"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-(--harvest-gold) text-white px-6 py-3 rounded-full font-bold hover:bg-(--harvest-gold-hover)] transition-colors inline-flex items-center justify-center gap-2 w-35 md:w-auto"
+                className="bg-(--harvest-gold) text-white px-6 py-3 rounded-full font-bold hover:opacity-90 transition-colors inline-flex items-center justify-center gap-2 w-35 md:w-auto"
               >
                 <FaPhone className="w-4 h-4" />
                 <span>Call Us</span>
@@ -86,10 +89,15 @@ export default function HowItWorks() {
                 <div className="flex flex-col items-center">
                   <div
                     className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center font-bold text-sm md:text-base ${
-                      step.highlighted
-                        ? "bg-(--harvest-gold) text-white"
+                      step.accentColor
+                        ? "text-white shadow-md"
                         : "bg-gray-100 text-gray-700"
                     }`}
+                    style={
+                      step.accentColor
+                        ? { backgroundColor: `var(${step.accentColor})` }
+                        : undefined
+                    }
                   >
                     {step.number}
                   </div>
@@ -97,10 +105,13 @@ export default function HowItWorks() {
                     index < steps.filter((s) => s.highlighted).length - 1 && (
                       <div
                         className="mt-2 mb-2 h-full w-0.5"
-                        style={{
-                          background:
-                            "repeating-linear-gradient(to bottom, transparent, transparent 4px, #dc2626 4px, #dc2626 8px)",
-                        }}
+                        style={
+                          step.accentColor
+                            ? {
+                                background: `repeating-linear-gradient(to bottom, transparent, transparent 4px, var(${step.accentColor}) 4px, var(${step.accentColor}) 8px)`,
+                              }
+                            : undefined
+                        }
                       ></div>
                     )}
                   {!step.highlighted && index < steps.length - 1 && (

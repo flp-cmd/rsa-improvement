@@ -18,6 +18,7 @@ export default function WhyRSA() {
       ),
       title: "Transparent Pricing",
       description: "Transparent quotes you can trust, with zero hidden fees.",
+      accentColor: "--pale-green",
     },
     {
       icon: (
@@ -37,6 +38,7 @@ export default function WhyRSA() {
       ),
       title: "Skilled Experts",
       description: "Certified technicians with proven track records.",
+      accentColor: "--pale-blue",
     },
     {
       icon: (
@@ -56,6 +58,7 @@ export default function WhyRSA() {
       ),
       title: "Trusted Quality",
       description: "We stand behind our work with quality assurance.",
+      accentColor: "--mid-blue",
     },
     {
       icon: (
@@ -75,6 +78,7 @@ export default function WhyRSA() {
       ),
       title: "Fast Response",
       description: "Emergency or scheduled, we're always quick to respond.",
+      accentColor: "--harvest-gold",
     },
   ];
 
@@ -84,7 +88,10 @@ export default function WhyRSA() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-2 h-2 bg-(--harvest-gold) rounded-full"></div>
+              <div
+                className="w-2 h-2 rounded-full"
+                style={{ backgroundColor: "var(--harvest-gold)" }}
+              ></div>
               <span className="text-gray-500 text-sm md:text-base">
                 Why RSA Improvement
               </span>
@@ -103,8 +110,12 @@ export default function WhyRSA() {
               <div
                 key={index}
                 className="bg-white rounded-lg shadow-md p-6 md:p-8 hover:shadow-lg transition-shadow"
+                style={{ borderTop: `4px solid var(${feature.accentColor})` }}
               >
-                <div className="w-12 h-12 bg-(--harvest-gold) rounded-full flex items-center justify-center text-white mb-4">
+                <div
+                  className="w-12 h-12 rounded-full flex items-center justify-center text-white mb-4"
+                  style={{ backgroundColor: `var(${feature.accentColor})` }}
+                >
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">

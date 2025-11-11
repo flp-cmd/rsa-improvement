@@ -6,8 +6,11 @@
   --harvest-gold: #b4740c;
   --harvest-gold-hover: #d89523;
   --rich-black: #101828;
-  --modern-green: #2c6e49;
+  --modern-green: #35763d;
   --modern-black: #101820;
+  --pale-green: #006a5a;
+  --pale-blue: #005a64;
+  --mid-blue: #2f4858;
 }
 
 .animate__animated.animate__bounceInDown {
