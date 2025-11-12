@@ -109,7 +109,7 @@ export default function WhyRSA() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-md p-6 md:p-8 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-lg shadow-md p-6 md:p-8 hover:shadow-2xl md:hover:scale-105 md:transition-all md:duration-300"
                 style={{ borderTop: `4px solid var(${feature.accentColor})` }}
               >
                 <div

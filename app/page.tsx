@@ -4,7 +4,6 @@ import AboutUs from "@/components/sections/AboutUs";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Services from "@/components/sections/Services";
 import RecentProjects from "@/components/sections/RecentProjects";
-import ServiceArea from "@/components/sections/ServiceArea";
 import Contact from "@/components/sections/Contact";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
@@ -23,7 +22,6 @@ export default function Home() {
       <Services />
       <RecentProjects />
       <Testimonials />
-      <ServiceArea />
       <Contact />
       <FAQ />
       <CTASection />

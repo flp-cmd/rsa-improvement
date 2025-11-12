@@ -1,35 +1,11 @@
 "use client";
 
+import { testimonials } from "@/utils/data";
 import Image from "next/image";
 import { useState } from "react";
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  const testimonials = [
-    {
-      name: "Sarah M, Homeowner",
-      location: "Brooklyn, NY",
-      text: "RSA Improvement completely transformed my living room! Their team was punctual, respectful, and paid incredible attention to detail when painting and installing new flooring. The results exceeded my expectations — my home feels brand new again. I highly recommend them for anyone looking for quality workmanship and reliable service.",
-      date: "June 07, 2025",
-      image: "/young-woman2.jpg",
-    },
-    {
-      name: "David R, Property Manager",
-      location: "Newark, US",
-      text: "We've worked with RSA Improvement on multiple rental property renovations, and they've consistently delivered excellent results. From drywall repairs to custom trim work, everything is done efficiently and with care. It's rare to find a company that combines craftsmanship with such great communication. They're our go-to for any maintenance or upgrade projects.",
-      date: "May 15, 2024",
-      image: "/front-view-man-working-as-real-estate-agent.jpg",
-    },
-    {
-      name: "Maria G, Business Owner",
-      location: "Queens, NY",
-      text: "RSA Improvement handled the flooring and painting for our office remodel, and the outcome was amazing. The crew was professional, tidy, and finished on schedule. The new look has made such a positive impression on our clients — I couldn't be happier with their service!",
-      date: "April 22, 2025",
-      image:
-        "/smiley-businesswoman-posing-outdoors-with-arms-crossed-copy-space.jpg",
-    },
-  ];
 
   return (
     <section className="py-8 md:py-24 bg-white">
@@ -50,8 +26,8 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mr-auto">
-          <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 max-w-6xl mr-auto">
+          <div className="flex flex-col gap-2 md:gap-4">
             {testimonials.map((testimonial, index) => (
               <button
                 key={index}
@@ -93,19 +69,19 @@ export default function Testimonials() {
             ))}
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
+          <div className="bg-white rounded-lg shadow-2xl p-6 md:p-8">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="shrink-0">
                 <Image
                   src={testimonials[activeIndex].image}
                   alt={testimonials[activeIndex].name}
-                  className="w-32 h-32 md:w-40 md:h-40 rounded-lg object-cover"
+                  className="w-32 h-32 md:w-40 md:h-40 rounded-md object-cover"
                   width={800}
                   height={400}
                 />
               </div>
               <div className="flex-1">
-                <div className="bg-white rounded-lg shadow-sm mb-4">
+                <div className="bg-white rounded-md shadow-sm p-4 mb-4">
                   <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-4">
                     {testimonials[activeIndex].text}
                   </p>

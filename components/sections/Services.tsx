@@ -1,76 +1,7 @@
-"use client";
-
+import { services } from "@/utils/data";
 import Image from "next/image";
-import { useState } from "react";
 
 export default function Services() {
-  const [activeFilter, setActiveFilter] = useState("All");
-
-  const filters = [
-    "All",
-    "Flooring Services",
-    "Indoor Repairs",
-    "Custom & Finishing Work",
-  ];
-
-  const services = [
-    {
-      number: "01",
-      title: "Flooring Installation/Repairs",
-      description:
-        "Expert flooring installation and repair services for hardwood, engineered flooring, laminate, and luxury vinyl (LVP/LVT). We deliver precise, high-quality results for residential and commercial spaces using premium materials and modern techniques. Count on our skilled team for durable, elegant, and functional floors that transform your space with lasting beauty.",
-      category: "Flooring Services",
-      image: "/flooring.jpg",
-      highlighted: true,
-    },
-    {
-      number: "02",
-      title: "Finish/Refinish",
-      description:
-        "Revitalize your hardwood floors with our expert finishing and refinishing services. We sand, stain, and seal with precision to restore beauty, enhance durability, and match your desired style. Whether refreshing worn floors or protecting new ones, our team delivers smooth, long-lasting, and elegant results that elevate any space.",
-      category: "Flooring Services",
-      highlighted: false,
-      tags: ["Licensed Experts", "Water-Saving Solutions", "2+"],
-    },
-    {
-      number: "03",
-      title: "Modifications",
-      description:
-        "Enhance your space with our non-structural modification services. From room reconfigurations and partitions to new fixtures and cabinetry, we deliver efficient, detail-focused upgrades that improve functionality and style. Our team ensures precise, high-quality results that elevate your home or business without altering its structural integrity.",
-      category: "Indoor Repairs",
-      highlighted: false,
-    },
-    {
-      number: "04",
-      title: "Painting",
-      description:
-        "Refresh your home or business with our professional painting services. We use high-quality paints and expert techniques to deliver smooth, durable finishes for both interiors and exteriors. From prep to clean-up, every detail is handled with care and precision, ensuring efficient, long-lasting, and visually stunning results that transform your space.",
-      category: "Indoor Repairs",
-      highlighted: false,
-    },
-    {
-      number: "05",
-      title: "Drywall",
-      description:
-        "Achieve smooth, flawless walls with our expert drywall and plaster services. From new installations to precise repairs, our skilled team ensures seamless, durable finishes ready for painting or decoration. With attention to detail and high-quality craftsmanship, we deliver polished walls and ceilings that enhance the beauty and longevity of your home or business.",
-      category: "Indoor Repairs",
-      highlighted: false,
-    },
-    {
-      number: "06",
-      title: "Other Services",
-      description:
-        "In addition to our core services, we offer a variety of finishing and custom carpentry solutions, including trim work, baseboard installation, and crown molding. Our experienced team delivers exceptional craftsmanship and attention to detail, enhancing both the beauty and functionality of your space. We focus on efficient, high-quality results that create visually appealing, practical, and comfortable environments for your home or business.",
-      category: "Custom & Finishing Work",
-      highlighted: false,
-    },
-  ];
-
-  const filteredServices =
-    activeFilter === "All"
-      ? services
-      : services.filter((service) => service.category === activeFilter);
-
   return (
     <section id="services" className="py-8 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,24 +19,8 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-3 mb-8">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 rounded-full font-medium transition-colors ${
-                activeFilter === filter
-                  ? "bg-(--harvest-gold)] text-white"
-                  : "bg-white text-gray-700 border border-gray-300 hover:border-gray-400"
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
-
         <div className="space-y-8">
-          {filteredServices.map((service, index) => (
+          {services.map((service, index) => (
             <div key={index}>
               {service.highlighted ? (
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">

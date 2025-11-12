@@ -1,66 +1,16 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
 import "animate.css";
+import { useState, useRef, useEffect } from "react";
 import { isValidEmail, isValidUSPhone } from "@/utils/validators";
-
-const services = [
-  {
-    number: "01",
-    title: "Flooring Installation/Repairs",
-    description:
-      "Expert flooring installation and repair services for hardwood, engineered flooring, laminate, and luxury vinyl (LVP/LVT). We deliver precise, high-quality results for residential and commercial spaces using premium materials and modern techniques. Count on our skilled team for durable, elegant, and functional floors that transform your space with lasting beauty.",
-    category: "Flooring Services",
-    image: "/flooring.jpg",
-    highlighted: true,
-  },
-  {
-    number: "02",
-    title: "Finish/Refinish",
-    description:
-      "Revitalize your hardwood floors with our expert finishing and refinishing services. We sand, stain, and seal with precision to restore beauty, enhance durability, and match your desired style. Whether refreshing worn floors or protecting new ones, our team delivers smooth, long-lasting, and elegant results that elevate any space.",
-    category: "Flooring Services",
-    highlighted: false,
-    tags: ["Licensed Experts", "Water-Saving Solutions", "2+"],
-  },
-  {
-    number: "03",
-    title: "Modifications",
-    description:
-      "Enhance your space with our non-structural modification services. From room reconfigurations and partitions to new fixtures and cabinetry, we deliver efficient, detail-focused upgrades that improve functionality and style. Our team ensures precise, high-quality results that elevate your home or business without altering its structural integrity.",
-    category: "Indoor Repairs",
-    highlighted: false,
-  },
-  {
-    number: "04",
-    title: "Painting",
-    description:
-      "Refresh your home or business with our professional painting services. We use high-quality paints and expert techniques to deliver smooth, durable finishes for both interiors and exteriors. From prep to clean-up, every detail is handled with care and precision, ensuring efficient, long-lasting, and visually stunning results that transform your space.",
-    category: "Indoor Repairs",
-    highlighted: false,
-  },
-  {
-    number: "05",
-    title: "Drywall",
-    description:
-      "Achieve smooth, flawless walls with our expert drywall and plaster services. From new installations to precise repairs, our skilled team ensures seamless, durable finishes ready for painting or decoration. With attention to detail and high-quality craftsmanship, we deliver polished walls and ceilings that enhance the beauty and longevity of your home or business.",
-    category: "Indoor Repairs",
-    highlighted: false,
-  },
-  {
-    number: "06",
-    title: "Other Services",
-    description:
-      "In addition to our core services, we offer a variety of finishing and custom carpentry solutions, including trim work, baseboard installation, and crown molding. Our experienced team delivers exceptional craftsmanship and attention to detail, enhancing both the beauty and functionality of your space. We focus on efficient, high-quality results that create visually appealing, practical, and comfortable environments for your home or business.",
-    category: "Custom & Finishing Work",
-    highlighted: false,
-  },
-];
+import { services } from "@/utils/data";
 
 export default function HeroSection() {
   const [result, setResult] = useState("");
   const [resultType, setResultType] = useState<"success" | "error" | "">("");
   const [isLoading, setIsLoading] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [phoneError, setPhoneError] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -122,6 +72,10 @@ export default function HeroSection() {
     } else if (name === "phone") {
       const filteredValue = value.replace(/[^0-9+\-().\s]/g, "");
       setFormData((prev) => ({ ...prev, [name]: filteredValue }));
+      setPhoneError(false);
+    } else if (name === "email") {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+      setEmailError(false);
     } else {
       setFormData((prev) => ({ ...prev, [name]: value }));
     }
@@ -137,6 +91,8 @@ export default function HeroSection() {
     setIsLoading(true);
     setResult("");
     setResultType("");
+    setEmailError(false);
+    setPhoneError(false);
 
     const form = e.currentTarget;
     const formDataObj = new FormData(form);
@@ -152,6 +108,7 @@ export default function HeroSection() {
     if (!isValidEmail(formData.email)) {
       setResult("Please enter a valid email!");
       setResultType("error");
+      setEmailError(true);
       setIsLoading(false);
       return;
     }
@@ -159,6 +116,7 @@ export default function HeroSection() {
     if (!isValidUSPhone(formData.phone)) {
       setResult("Please enter a valid phone number!");
       setResultType("error");
+      setPhoneError(true);
       setIsLoading(false);
       return;
     }
@@ -193,6 +151,8 @@ export default function HeroSection() {
               service: "",
               message: "",
             });
+            setEmailError(false);
+            setPhoneError(false);
             if (textareaRef.current) {
               textareaRef.current.style.height = "auto";
             }
@@ -245,7 +205,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="relative">
           <div className="pt-8 pb-4 text-center md:text-start md:pb-0 relative z-10">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">
               <span className="text-(--modern-green) font-black">
                 Transforming
               </span>{" "}
@@ -290,7 +250,11 @@ export default function HeroSection() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                    className={`w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 ${
+                      emailError
+                        ? "border-2 border-red-500 focus:ring-red-500"
+                        : "focus:ring-white"
+                    }`}
                   />
                 </div>
 
@@ -302,7 +266,11 @@ export default function HeroSection() {
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                    className={`w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 ${
+                      phoneError
+                        ? "border-2 border-red-500 focus:ring-red-500"
+                        : "focus:ring-white"
+                    }`}
                   />
                 </div>
 
@@ -378,7 +346,7 @@ export default function HeroSection() {
                 <button
                   type="submit"
                   disabled={isSubmitDisabled}
-                  className={`w-1/2 mx-auto bg-white text-(--modern-black) px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2 ${
+                  className={`w-full md:w-50 mx-auto bg-white text-(--modern-black) px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2 ${
                     isSubmitDisabled
                       ? "opacity-50 cursor-not-allowed"
                       : "cursor-pointer hover:bg-gray-300 hover:scale-110 group"
@@ -407,7 +375,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="relative mt-8 md:mt-12">
+          <div className="hidden md:block relative mt-8 md:mt-12">
             <div
               className="relative w-full h-[600px] md:h-[600px] lg:h-[600px] rounded-lg overflow-hidden"
               style={{

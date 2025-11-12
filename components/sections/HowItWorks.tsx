@@ -1,47 +1,7 @@
+import { steps } from "@/utils/data";
 import { FaPhone } from "react-icons/fa";
 
 export default function HowItWorks() {
-  const steps = [
-    {
-      number: "01",
-      title: "Request Service",
-      description:
-        "Share your repair needs through our quick form or give us a call. We'll review your request and guide you to the right service.",
-      highlighted: true,
-      accentColor: "--pale-green",
-    },
-    {
-      number: "02",
-      title: "Get a Quote",
-      description:
-        "Our team provides a clear, upfront estimate so you know exactly what to expect — no hidden costs, just honest pricing.",
-      highlighted: true,
-      accentColor: "--pale-blue",
-    },
-    {
-      number: "03",
-      title: "Schedule Visit",
-      description:
-        "Choose a date and time that works best for you, and we'll make sure our team arrives right on schedule.",
-      highlighted: true,
-      accentColor: "--mid-blue",
-    },
-    {
-      number: "04",
-      title: "Professional Repair",
-      description:
-        "Our experienced technicians handle the job with care and efficiency, ensuring high-quality results that last.",
-      highlighted: false,
-    },
-    {
-      number: "05",
-      title: "Follow-Up & Guarantee",
-      description:
-        "After the repair, we'll check in to make sure you're completely satisfied. Every service is backed by our quality guarantee.",
-      highlighted: false,
-    },
-  ];
-
   return (
     <section id="how-it-works" className="py-8 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

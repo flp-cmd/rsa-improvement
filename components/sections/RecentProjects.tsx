@@ -1,27 +1,7 @@
+import { projects } from "@/utils/data";
 import Image from "next/image";
 
 export default function RecentProjects() {
-  const projects = [
-    {
-      title: "Kitchen Exhaust Repair & Maintenance",
-      description:
-        "Successfully fixed and optimized the kitchen exhaust system to improve airflow, reduce heat buildup, and enhance overall ventilation and performance, ensuring a cleaner and more comfortable cooking environment.",
-      tags: ["Air Flow Optimization", "Licensed Experts", "2+"],
-      year: "2035",
-      location: "Los Angeles, CA",
-      image: "/flooring.jpg",
-    },
-    {
-      title: "Kitchen Water Tap Replacement & Leak Fix",
-      description:
-        "We repaired a leaking kitchen tap and upgraded it with a modern, water-saving fixture, improving efficiency, preventing future leaks, and giving the sink area a cleaner, refreshed look.",
-      tags: ["Water-Saving Solutions", "Licensed Experts", "2+"],
-      year: "2035",
-      location: "New York, NY",
-      image: "/flooring.jpg",
-    },
-  ];
-
   return (
     <section id="projects" className="py-8 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
