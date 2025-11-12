@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import "animate.css";
+import { isValidEmail, isValidUSPhone } from "@/utils/validators";
 
 const services = [
   {
@@ -58,6 +59,7 @@ const services = [
 
 export default function HeroSection() {
   const [result, setResult] = useState("");
+  const [resultType, setResultType] = useState<"success" | "error" | "">("");
   const [isLoading, setIsLoading] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -113,7 +115,16 @@ export default function HeroSection() {
     >
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    if (name === "name") {
+      const filteredValue = value.replace(/[0-9]/g, "");
+      setFormData((prev) => ({ ...prev, [name]: filteredValue }));
+    } else if (name === "phone") {
+      const filteredValue = value.replace(/[^0-9+\-().\s]/g, "");
+      setFormData((prev) => ({ ...prev, [name]: filteredValue }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleServiceSelect = (serviceTitle: string) => {
@@ -125,23 +136,39 @@ export default function HeroSection() {
     e.preventDefault();
     setIsLoading(true);
     setResult("");
+    setResultType("");
 
     const form = e.currentTarget;
-    const formData = new FormData(form);
+    const formDataObj = new FormData(form);
     const accessKey = process.env.NEXT_PUBLIC_WEB_3_FORMS;
 
     if (!accessKey) {
       setResult("Error: API key not configured");
+      setResultType("error");
       setIsLoading(false);
       return;
     }
 
-    formData.append("access_key", accessKey);
+    if (!isValidEmail(formData.email)) {
+      setResult("Please enter a valid email!");
+      setResultType("error");
+      setIsLoading(false);
+      return;
+    }
+
+    if (!isValidUSPhone(formData.phone)) {
+      setResult("Please enter a valid phone number!");
+      setResultType("error");
+      setIsLoading(false);
+      return;
+    }
+
+    formDataObj.append("access_key", accessKey);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData,
+        body: formDataObj,
       });
 
       if (!response.ok) {
@@ -151,8 +178,8 @@ export default function HeroSection() {
       const data = await response.json();
 
       if (data.success) {
-        const successMessage = data.message || "Message sent successfully!";
-        setResult(successMessage);
+        setResult("Message sent successfully!");
+        setResultType("success");
 
         setTimeout(() => {
           try {
@@ -174,13 +201,14 @@ export default function HeroSection() {
           }
         }, 100);
       } else {
-        const errorMessage =
-          "Error: " + (data.message || "Failed to send message");
+        const errorMessage = "Error: Failed to send message";
         setResult(errorMessage);
+        setResultType("error");
       }
     } catch (error) {
       console.error("Form submission error:", error);
       setResult("Error: Failed to send message. Please try again.");
+      setResultType("error");
     } finally {
       setIsLoading(false);
     }
@@ -188,11 +216,32 @@ export default function HeroSection() {
 
   const isSubmitDisabled = isLoading || !isFormValid;
 
+  useEffect(() => {
+    if (result) {
+      const timer = setTimeout(() => {
+        setResult("");
+        setResultType("");
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [result]);
+
   return (
     <section
       id="home"
       className="relative min-h-screen pt-20 md:pt-20 bg-gray-50"
     >
+      {result && (
+        <div
+          className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-6 py-4 rounded-lg shadow-lg animate__animated animate__fadeInDown ${
+            resultType === "error"
+              ? "bg-red-500 text-white"
+              : "bg-green-500 text-white"
+          }`}
+        >
+          <p className="text-sm md:text-base font-medium">{result}</p>
+        </div>
+      )}
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="relative">
           <div className="pt-8 pb-4 text-center md:text-start md:pb-0 relative z-10">
@@ -354,17 +403,6 @@ export default function HeroSection() {
                     </svg>
                   )}
                 </button>
-                {result && (
-                  <p
-                    className={`text-center text-sm font-medium ${
-                      result.includes("Error")
-                        ? "text-red-200"
-                        : "text-green-200"
-                    }`}
-                  >
-                    {result}
-                  </p>
-                )}
               </form>
             </div>
           </div>

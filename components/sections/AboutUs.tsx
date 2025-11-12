@@ -73,7 +73,7 @@ export default function AboutUs() {
                   <span> +</span>
                 </div>
                 <div className="text-gray-600 text-sm md:text-base">
-                  Project Completed
+                  Completed Projects
                 </div>
               </div>
 
