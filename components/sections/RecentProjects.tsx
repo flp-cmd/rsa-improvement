@@ -13,7 +13,7 @@ export default function RecentProjects() {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Recent Projects in Action
+            Recent Projects
           </h2>
           <p className="text-gray-600 text-base md:text-lg max-w-2xl tracking-wider">
             {
