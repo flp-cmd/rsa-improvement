@@ -51,10 +51,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#service-area"
+                  href="#testimonials"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Service Area
+                  Testimonials
                 </Link>
               </li>
             </ul>

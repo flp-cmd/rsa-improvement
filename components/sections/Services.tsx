@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section id="services" className="bg-white">
+    <section id="services" className="bg-white scroll-mt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">

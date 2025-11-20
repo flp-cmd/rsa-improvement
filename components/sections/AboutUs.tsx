@@ -4,7 +4,7 @@ import CountUp from "../animations/CountUp";
 export default function AboutUs() {
   const duration = 0.5;
   return (
-    <section id="about" className="bg-white">
+    <section id="about" className="bg-white scroll-mt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-start gap-4 md:gap-8">
           <div className="flex-1">

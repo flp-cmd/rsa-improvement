@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function RecentProjects() {
   return (
-    <section id="projects" className="bg-white">
+    <section id="projects" className="bg-white scroll-mt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-12">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-2 h-2 bg-(--harvest-gold) rounded-full"></div>
             <span className="text-(--section-title) text-sm md:text-base font-semibold">
-              Our Projects
+              Projects
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
