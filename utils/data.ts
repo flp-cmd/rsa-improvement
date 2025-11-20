@@ -48,7 +48,7 @@ export const services = [
     description:
       "Expert flooring installation and repair services for hardwood, engineered flooring, laminate, and luxury vinyl (LVP/LVT). We deliver precise, high-quality results for residential and commercial spaces using premium materials and modern techniques. Count on our skilled team for durable, elegant, and functional floors that transform your space with lasting beauty.",
     category: "Flooring Services",
-    image: "/flooring.jpg",
+    image: "/flooring-service.jpeg",
     highlighted: true,
   },
   {
@@ -84,19 +84,19 @@ export const projects = [
     title: "Kitchen Exhaust Repair & Maintenance",
     description:
       "Successfully fixed and optimized the kitchen exhaust system to improve airflow, reduce heat buildup, and enhance overall ventilation and performance, ensuring a cleaner and more comfortable cooking environment.",
-    tags: ["Air Flow Optimization", "Licensed Experts", "2+"],
-    year: "2035",
+    year: "2025",
     location: "Los Angeles, CA",
-    image: "/flooring.jpg",
+    beforeImage: "/before1.jpg",
+    afterImage: "/after1.jpg",
   },
   {
     title: "Kitchen Water Tap Replacement & Leak Fix",
     description:
       "We repaired a leaking kitchen tap and upgraded it with a modern, water-saving fixture, improving efficiency, preventing future leaks, and giving the sink area a cleaner, refreshed look.",
-    tags: ["Water-Saving Solutions", "Licensed Experts", "2+"],
-    year: "2035",
+    year: "2025",
     location: "New York, NY",
-    image: "/flooring.jpg",
+    beforeImage: "/before2.jpg",
+    afterImage: "/after2.jpg",
   },
 ];
 

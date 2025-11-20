@@ -17,58 +17,62 @@ export default function RecentProjects() {
           </h2>
           <p className="text-gray-600 text-base md:text-lg max-w-2xl tracking-wider">
             {
-              "Take a look at how we've been helping homeowners create safer, more comfortable spaces."
+              "Take a look at how we've been helping homeowners transform their spaces with quality craftsmanship and lasting comfort."
             }
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
-              <div className="flex flex-col md:flex-row">
-                <div className="w-full md:w-1/2 h-64 md:h-auto">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                    width={800}
-                    height={600}
-                  />
-                </div>
-                <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm md:text-base mb-4 leading-relaxed tracking-wider">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tags.map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="bg-gray-100 text-gray-700 text-xs md:text-sm px-3 py-1 rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+              <div className="flex flex-col xl:flex-row">
+                <div className="w-full md:w-full p-4 md:p-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="relative group rounded-xl overflow-hidden shadow-md">
+                      <span className="absolute top-3 left-3 bg-black/70 text-white text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full z-10 pointer-events-none">
+                        Before
+                      </span>
+                      <Image
+                        src={project.beforeImage}
+                        alt={`${project.title} before service`}
+                        className="w-full h-56 md:h-100 object-cover transition-transform duration-300 group-hover:scale-105"
+                        width={600}
+                        height={450}
+                      />
                     </div>
-                    <div className="flex flex-col sm:flex-row gap-4 text-sm text-gray-600 mb-4">
-                      <div>
-                        <span className="font-medium">Year</span> {project.year}
-                      </div>
-                      <div>
-                        <span className="font-medium">Location</span>{" "}
-                        {project.location}
-                      </div>
+                    <div className="relative group rounded-xl overflow-hidden shadow-md">
+                      <span className="absolute top-3 left-3 bg-(--harvest-gold) text-white text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full z-10 pointer-events-none">
+                        After
+                      </span>
+                      <Image
+                        src={project.afterImage}
+                        alt={`${project.title} after service`}
+                        className="w-full h-56 md:h-100 object-cover transition-transform duration-300 group-hover:scale-105"
+                        width={600}
+                        height={450}
+                      />
                     </div>
                   </div>
-                  <button className="bg-(--harvest-gold)] text-white px-6 py-3 rounded-lg font-bold hover:bg-(--harvest-gold-hover)] transition-colors w-full md:w-auto">
-                    See Details
-                  </button>
+                </div>
+                <div className="w-full xl:w-1/3 p-6 md:p-8 md:gap-6 flex flex-col">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm md:text-base mb-4 leading-relaxed tracking-wider">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 text-sm text-gray-600 mb-4">
+                    <div className="flex items-center gap-1.5">
+                      <span className="font-medium">Year</span> {project.year}
+                    </div>
+                    <div>
+                      <span className="font-medium">Location</span>{" "}
+                      {project.location}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
