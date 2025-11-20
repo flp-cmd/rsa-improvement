@@ -2,40 +2,40 @@
 export const steps = [
   {
     number: "1",
-    title: "Request Service",
+    title: "Request an On-Site Assessment",
     description:
-      "Share your repair needs through our quick form or give us a call. We'll review your request and guide you to the right service.",
+      "Share the details of your project (flooring type, area size, and demolition needs). We'll review your request and schedule a convenient on-site consultation for accurate measurement and scoping.",
     highlighted: true,
     accentColor: "--pale-green",
   },
   {
     number: "2",
-    title: "Get a Quote",
+    title: "Get a Detailed Quote",
     description:
-      "Our team provides a clear, upfront estimate so you know exactly what to expect — no hidden costs, just honest pricing.",
+      "Our team provides a clear, upfront estimate. You'll know exactly what to expect—no hidden costs, just honest pricing for materials and expert labor.",
     highlighted: true,
     accentColor: "--pale-blue",
   },
   {
     number: "3",
-    title: "Schedule Visit",
+    title: "Schedule the Project Start",
     description:
-      "Choose a date and time that works best for you, and we'll make sure our team arrives right on schedule.",
+      "Choose a date and time that works best for your schedule. We'll ensure our experienced team arrives on time, fully equipped, and ready to begin the work.",
     highlighted: true,
     accentColor: "--mid-blue",
   },
   {
     number: "4",
-    title: "Professional Repair",
+    title: "Professional Demolition & Installation",
     description:
-      "Our experienced technicians handle the job with care and efficiency, ensuring high-quality results that last.",
+      "Our experienced technicians handle the demolition (if required) carefully and the installation of your new flooring with maximum efficiency, ensuring a high-quality, durable finish that lasts.",
     highlighted: false,
   },
   {
     number: "5",
-    title: "Follow-Up & Guarantee",
+    title: "Final Walkthrough & Guarantee",
     description:
-      "After the repair, we'll check in to make sure you're completely satisfied. Every service is backed by our quality guarantee.",
+      "After the work is complete, we'll perform a final inspection tour with you to ensure you are 100% satisfied. Every service is backed by our quality guarantee.",
     highlighted: false,
   },
 ];
@@ -62,33 +62,17 @@ export const services = [
   },
   {
     number: "03",
-    title: "Modifications",
+    title: "Demolition",
     description:
-      "Enhance your space with our non-structural modification services. From room reconfigurations and partitions to new fixtures and cabinetry, we deliver efficient, detail-focused upgrades that improve functionality and style. Our team ensures precise, high-quality results that elevate your home or business without altering its structural integrity.",
+      "Remodeling your home starts with a clean slate. Demolition can be messy, complicated, and time-consuming—but it doesn't have to be. RSA Improvement provides professional, safe, and efficient demolition services to prepare your space for its beautiful future.",
     category: "Indoor Repairs",
     highlighted: false,
   },
   {
     number: "04",
-    title: "Painting",
-    description:
-      "Refresh your home or business with our professional painting services. We use high-quality paints and expert techniques to deliver smooth, durable finishes for both interiors and exteriors. From prep to clean-up, every detail is handled with care and precision, ensuring efficient, long-lasting, and visually stunning results that transform your space.",
-    category: "Indoor Repairs",
-    highlighted: false,
-  },
-  {
-    number: "05",
-    title: "Drywall",
-    description:
-      "Achieve smooth, flawless walls with our expert drywall and plaster services. From new installations to precise repairs, our skilled team ensures seamless, durable finishes ready for painting or decoration. With attention to detail and high-quality craftsmanship, we deliver polished walls and ceilings that enhance the beauty and longevity of your home or business.",
-    category: "Indoor Repairs",
-    highlighted: false,
-  },
-  {
-    number: "06",
     title: "Other Services",
     description:
-      "In addition to our core services, we offer a variety of finishing and custom carpentry solutions, including trim work, baseboard installation, and crown molding. Our experienced team delivers exceptional craftsmanship and attention to detail, enhancing both the beauty and functionality of your space. We focus on efficient, high-quality results that create visually appealing, practical, and comfortable environments for your home or business.",
+      "Do you have a unique renovation idea? We are highly adaptable and experienced in executing a variety of specialized projects beyond our core offerings.",
     category: "Custom & Finishing Work",
     highlighted: false,
   },
@@ -145,28 +129,28 @@ export const testimonials = [
 // FAQ
 export const faqs = [
   {
-    question: "What areas does RSA Improvement serve?",
-    answer:
-      "We proudly serve the entire tri-state area, including New York, New Jersey, and Connecticut. If you're outside these regions, contact us — we often travel for larger renovation projects.",
-  },
-  {
     question: "Are estimates free?",
     answer:
-      "Yes! RSA Improvement offers free, no-obligation estimates for all our services. We'll visit your property, discuss your goals, and provide a detailed quote so you know exactly what to expect.",
+      "Yes. We offer free, no-obligation quotes for all flooring, demolition, and finishing projects. Our quotes are detailed and upfront, so you know exactly what the total cost will be.",
   },
   {
     question: "Do you provide both residential and commercial services?",
     answer:
-      "Absolutely. Our team handles everything from small home improvement jobs to full-scale commercial renovations. Whether it's repainting an office or installing new floors in your home, we bring the same level of professionalism and attention to detail.",
+      "Yes, RSA Improvement is equipped to handle projects of all sizes, serving both residential homes and commercial spaces (offices, retail, property management, etc.). Our expertise covers the specific needs of each environment.",
   },
   {
     question: "How long does a typical project take?",
     answer:
-      "It depends on the size and scope of the work. A single-room painting project can often be completed in one day, while full flooring installations or remodeling projects may take several days. We always provide a clear timeline before starting.",
+      "Project duration varies widely based on the scope (e.g., demolition only vs. full installation) and size of the area. Once we complete the on-site assessment, we will provide you with a detailed schedule and estimated completion date.",
   },
   {
     question: "Is your work insured and guaranteed?",
     answer:
-      "Yes. RSA Improvement is fully licensed and insured, and all of our work comes with a satisfaction guarantee. If something isn't right, we'll make it right — your peace of mind is our priority.",
+      "Absolutely. RSA Improvement is fully licensed and insured for your protection and peace of mind. Furthermore, we stand by the quality of our craftsmanship with a comprehensive labor guarantee on all services performed.",
+  },
+  {
+    question: "Do I need to remove my old flooring before you arrive?",
+    answer:
+      "No. You can leave the hard work to us! We specialize in safe and efficient demolition and removal of existing flooring (tile, carpet, wood, etc.) as part of our full-service package. This saves you time and effort.",
   },
 ];

@@ -4,18 +4,18 @@ import CountUp from "../animations/CountUp";
 export default function AboutUs() {
   const duration = 0.5;
   return (
-    <section id="about" className="py-8 md:py-24 bg-white">
+    <section id="about" className="bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-start gap-4 md:gap-8 mb-12">
+        <div className="flex items-start gap-4 md:gap-8">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-2 h-2 bg-(--harvest-gold) rounded-full shrink-0"></div>
 
-              <h2 className="text-gray-600 text-sm md:text-base font-medium">
+              <h2 className="text-(--section-title) text-sm md:text-base font-semibold">
                 About Us
               </h2>
             </div>
-            <p className="text-gray-800 text-base md:text-lg lg:text-xl leading-relaxed mb-8 max-w-4xl">
+            <p className="text-(--text-gray) text-base md:text-lg lg:text-xl leading-relaxed mb-8 max-w-4xl tracking-wider">
               With over six years of experience in the construction and
               renovation industry, RSA Improvement has established itself as a
               trusted name for quality and reliability. Our commitment to
@@ -25,8 +25,8 @@ export default function AboutUs() {
               service, helping our clients bring their visions to life.
             </p>
             <Link href="#whyRSA">
-              <button className="bg-(--harvest-gold) text-white px-6 py-3 rounded-lg font-bold hover:bg-(--harvest-gold-hover) transition-colors mb-12 cursor-pointer">
-                Learn More
+              <button className="bg-(--harvest-gold) text-white px-6 py-3 rounded-lg font-bold hover:bg-(--harvest-gold-hover) transition-colors duration-300 ease-in-out mb-12 cursor-pointer">
+                Learn Why
               </button>
             </Link>
 

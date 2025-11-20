@@ -14,34 +14,36 @@ export default function Contact() {
       label: "Email",
       value: "contact@rsaimprovement.com",
       link: null,
-      accentColor: "--pale-blue",
+      accentColor: "--mid-blue",
     },
     {
       icon: <FaClock className="w-6 h-6" />,
       label: "Working Hours",
       value: "Mon-Sat: 8:00AM-5:00PM",
       link: null,
-      accentColor: "--mid-blue",
+      accentColor: "--pale-blue",
     },
   ];
 
   return (
-    <section id="contact" className="py-8 md:py-24 bg-white">
+    <section id="contact" className="bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-2 h-2 bg-(--harvest-gold) rounded-full"></div>
-            <span className="text-gray-500 text-sm md:text-base">Contact</span>
+            <span className="text-(--section-title) text-sm md:text-base font-semibold">
+              Contact
+            </span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Get In Touch With Us
           </h2>
-          <p className="text-gray-600 text-base md:text-lg">
+          <p className="text-gray-600 text-base md:text-lg tracking-wider">
             Reach out to us for any questions or inquiries about our services.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-2">
           {contactInfo.map((item, index) => (
             <div
               key={index}
@@ -57,12 +59,12 @@ export default function Contact() {
               {item.link ? (
                 <a
                   href={item.link}
-                  className="text-xl md:text-2xl font-bold text-gray-900 hover:text-(--pale-green) transition-colors"
+                  className="text-xl md:text-2xl font-bold text-gray-900 hover:text-(--pale-green) transition-colors wrap-break-word overflow-wrap-anywhere"
                 >
                   {item.value}
                 </a>
               ) : (
-                <p className="text-xl md:text-2xl font-bold text-gray-900">
+                <p className="text-xl md:text-2xl font-bold text-gray-900 wrap-break-word overflow-wrap-anywhere">
                   {item.value}
                 </p>
               )}

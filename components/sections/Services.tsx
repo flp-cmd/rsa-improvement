@@ -3,17 +3,19 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section id="services" className="py-8 md:py-24 bg-white">
+    <section id="services" className="bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-2 h-2 bg-(--harvest-gold) rounded-full"></div>
-            <span className="text-gray-500 text-sm md:text-base">Services</span>
+            <span className="text-(--section-title) text-sm md:text-base font-semibold">
+              Services
+            </span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Reliable Home Services You Can Count On
           </h2>
-          <p className="text-gray-600 text-base md:text-lg max-w-2xl">
+          <p className="text-gray-600 text-base md:text-lg max-w-2xl tracking-wider">
             A wide range of professional services tailored to keep your home
             safe, functional, and comfortable.
           </p>
@@ -46,7 +48,7 @@ export default function Services() {
                             {service.title}
                           </h3>
                         </div>
-                        <p className="text-gray-600 mb-4 leading-relaxed">
+                        <p className="text-gray-600 mb-4 leading-relaxed tracking-wider">
                           {service.description}
                         </p>
                         <div className="flex flex-wrap gap-2 mb-4">
@@ -75,7 +77,7 @@ export default function Services() {
                     <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+                    <p className="text-gray-600 text-base md:text-lg leading-relaxed tracking-wider">
                       {service.description}
                     </p>
                   </div>

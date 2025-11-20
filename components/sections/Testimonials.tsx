@@ -8,19 +8,19 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-8 md:py-24 bg-white">
+    <section className="bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-2 h-2 bg-(--harvest-gold) rounded-full"></div>
-            <span className="text-gray-500 text-sm md:text-base">
+            <span className="text-(--section-title) text-sm md:text-base font-semibold">
               Testimonial
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Trusted by Homeowners Like You
           </h2>
-          <p className="text-gray-600 text-base md:text-lg max-w-2xl">
+          <p className="text-gray-600 text-base md:text-lg max-w-2xl tracking-wider">
             Because nothing speaks louder than the satisfaction of our happy
             customers.
           </p>
@@ -70,19 +70,19 @@ export default function Testimonials() {
           </div>
 
           <div className="bg-white rounded-lg shadow-2xl p-6 md:p-8">
-            <div className="flex flex-col md:flex-row gap-6">
+            <div className="flex md:flex-row gap-6">
               <div className="shrink-0">
                 <Image
                   src={testimonials[activeIndex].image}
                   alt={testimonials[activeIndex].name}
-                  className="w-32 h-32 md:w-40 md:h-40 rounded-md object-cover"
+                  className="w-22 h-22 md:w-40 md:h-40 rounded-md object-cover"
                   width={800}
                   height={400}
                 />
               </div>
               <div className="flex-1">
-                <div className="bg-white rounded-md shadow-sm p-4 mb-4">
-                  <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-4">
+                <div className="bg-white rounded-md shadow-sm mb-4">
+                  <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-4 tracking-wider">
                     {testimonials[activeIndex].text}
                   </p>
                   <p className="text-gray-500 text-sm">

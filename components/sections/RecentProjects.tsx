@@ -3,19 +3,19 @@ import Image from "next/image";
 
 export default function RecentProjects() {
   return (
-    <section id="projects" className="py-8 md:py-24 bg-white">
+    <section id="projects" className="bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-12">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-2 h-2 bg-(--harvest-gold) rounded-full"></div>
-            <span className="text-gray-500 text-sm md:text-base">
+            <span className="text-(--section-title) text-sm md:text-base font-semibold">
               Our Projects
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Recent Projects in Action
           </h2>
-          <p className="text-gray-600 text-base md:text-lg max-w-2xl">
+          <p className="text-gray-600 text-base md:text-lg max-w-2xl tracking-wider">
             {
               "Take a look at how we've been helping homeowners create safer, more comfortable spaces."
             }
@@ -43,7 +43,7 @@ export default function RecentProjects() {
                     <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 text-sm md:text-base mb-4 leading-relaxed">
+                    <p className="text-gray-600 text-sm md:text-base mb-4 leading-relaxed tracking-wider">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">

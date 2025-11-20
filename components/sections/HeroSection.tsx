@@ -187,10 +187,7 @@ export default function HeroSection() {
   }, [result]);
 
   return (
-    <section
-      id="home"
-      className="relative min-h-screen pt-20 md:pt-20 bg-gray-50"
-    >
+    <section id="home" className="relative pt-20 md:pt-20 bg-gray-50">
       {result && (
         <div
           className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-6 py-4 rounded-lg shadow-lg animate__animated animate__fadeInDown ${
@@ -221,11 +218,11 @@ export default function HeroSection() {
           </div>
 
           <div className="relative md:absolute md:top-35 md:right-6 lg:top-50 xl:top-8 xl:right-10 w-full md:w-[400px] lg:w-[400px] xl:w-[450px] mt-8 lg:mt-0 z-20">
-            <div className="bg-(--harvest-gold) rounded-4xl p-6 md:p-8 animate__animated animate__bounceInDown">
-              <h2 className="text-(--modern-black) text-2xl md:text-4xl font-extrabold text-center mb-2">
+            <div className="bg-(--harvest-gold) rounded-[16px] p-6 md:p-8 animate__animated animate__bounceInDown">
+              <h2 className="text-white/95 text-2xl md:text-4xl font-extrabold text-center mb-2">
                 Get a Free Quote
               </h2>
-              <p className="text-(--modern-black) text-center mb-6 text-sm md:text-xl">
+              <p className="text-white/90 text-center mb-6 text-sm md:text-xl">
                 Reliable, affordable home services you can count on.
               </p>
 
@@ -346,10 +343,10 @@ export default function HeroSection() {
                 <button
                   type="submit"
                   disabled={isSubmitDisabled}
-                  className={`w-full md:w-50 mx-auto bg-white text-(--modern-black) px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2 ${
+                  className={`w-full mx-auto bg-white text-(--modern-black) px-6 py-3 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2 ${
                     isSubmitDisabled
-                      ? "opacity-50 cursor-not-allowed"
-                      : "cursor-pointer hover:bg-gray-300 hover:scale-110 group"
+                      ? "opacity-60 cursor-not-allowed"
+                      : "cursor-pointer hover:bg-gray-300 hover:scale-105 group"
                   }`}
                 >
                   <span>{isLoading ? "Sending..." : "Send Message"}</span>

@@ -16,8 +16,9 @@ export default function WhyRSA() {
           />
         </svg>
       ),
-      title: "Transparent Pricing",
-      description: "Transparent quotes you can trust, with zero hidden fees.",
+      title: "Transparent Quotes",
+      description:
+        "Trust our clear pricing with zero hidden fees or unexpected costs.",
       accentColor: "--pale-green",
     },
     {
@@ -83,7 +84,7 @@ export default function WhyRSA() {
   ];
 
   return (
-    <section id="whyRSA" className="py-8 md:py-24 bg-white">
+    <section id="whyRSA" className="bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           <div>
@@ -92,14 +93,14 @@ export default function WhyRSA() {
                 className="w-2 h-2 rounded-full"
                 style={{ backgroundColor: "var(--harvest-gold)" }}
               ></div>
-              <span className="text-gray-500 text-sm md:text-base">
+              <span className="text-(--section-title) text-sm md:text-base font-semibold">
                 Why RSA Improvement
               </span>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               {"Why RSA Improvement Earns Every Homeowner's Trust"}
             </h2>
-            <p className="text-gray-600 text-base md:text-lg mb-8 leading-relaxed">
+            <p className="text-gray-600 text-base md:text-lg mb-8 leading-relaxed tracking-wider">
               Trusted by homeowners for our commitment to quality, integrity,
               and dependable service.
             </p>
@@ -109,7 +110,7 @@ export default function WhyRSA() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-md p-6 md:p-8 hover:shadow-2xl md:hover:scale-105 md:transition-all md:duration-300"
+                className="bg-white rounded-xl shadow-md p-6 pb-10 md:p-8 md:pb-18 hover:shadow-2xl md:hover:scale-105 md:transition-all md:duration-300"
                 style={{ borderTop: `4px solid var(${feature.accentColor})` }}
               >
                 <div
@@ -121,7 +122,7 @@ export default function WhyRSA() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 text-sm md:text-base">
+                <p className="text-gray-600 text-sm md:text-base tracking-wide">
                   {feature.description}
                 </p>
               </div>

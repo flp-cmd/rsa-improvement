@@ -3,33 +3,34 @@ import { FaPhone } from "react-icons/fa";
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-8 md:py-24 bg-white">
+    <section id="how-it-works" className="bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-2 h-2 bg-(--harvest-gold) rounded-full"></div>
-              <span className="text-gray-500 text-sm md:text-base">
+              <span className="text-(--section-title) text-sm md:text-base font-semibold">
                 How It Works
               </span>
             </div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Simple Steps to Get Your Home Fixed
+              Simple Steps to Start Your Project
             </h2>
 
-            <p className="text-gray-700 text-base md:text-lg mb-8 leading-relaxed">
-              From the beginning, we handle every step with attention, making
-              sure your home repairs are completed smoothly without any
-              unnecessary stress.
+            <p className="text-gray-700 text-base md:text-lg mb-8 leading-relaxed tracking-wider">
+              From safe demolition of the old floor to the flawless installation
+              of the new, we handle every step with attention, ensuring your
+              floor renovation is smooth, fast, and completely stress-free.
             </p>
 
-            <div className="rounded-lg my-8">
+            <div className="hidden md:block rounded-lg my-8">
               <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                 Need some help deciding?
               </h3>
               <p className="text-gray-700 mb-6 text-sm md:text-base">
-                Talk to our team for quick guidance on your repair needs.
+                Talk to our specialized team for quick guidance on the best
+                solution for your home.
               </p>
               <a
                 href="https://wa.me/18622374628"
@@ -37,8 +38,12 @@ export default function HowItWorks() {
                 rel="noopener noreferrer"
                 className="bg-(--harvest-gold) text-white px-6 py-3 rounded-full font-bold hover:opacity-90 transition-colors inline-flex items-center justify-center gap-2 w-35 md:w-auto"
               >
-                <FaPhone className="w-4 h-4" />
-                <span>Call Us</span>
+                <div className="flex gap-4 items-center">
+                  <FaPhone className="w-4 h-4" />
+                  <span className="font-normal text-[16px]">
+                    Talk to an Expert
+                  </span>
+                </div>
               </a>
             </div>
           </div>
@@ -74,8 +79,8 @@ export default function HowItWorks() {
                         }
                       ></div>
                     )}
-                  {!step.highlighted && index < steps.length - 1 && (
-                    <div className="w-0.5 h-full bg-gray-200 mt-2 mb-2"></div>
+                  {!step.highlighted && index < steps.length - 2 && (
+                    <div className="w-0.5 h-full bg-black mt-2 mb-2"></div>
                   )}
                 </div>
 
@@ -83,12 +88,35 @@ export default function HowItWorks() {
                   <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                  <p className="text-gray-700 text-sm md:text-base leading-relaxed tracking-wider">
                     {step.description}
                   </p>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="block md:hidden rounded-lg mt-6 px-4">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+              Need some help deciding?
+            </h3>
+            <p className="text-gray-700 mb-6 text-sm md:text-base">
+              Talk to our specialized team for quick guidance on the best
+              solution for your home.
+            </p>
+            <a
+              href="https://wa.me/18622374628"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-(--harvest-gold) text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition-colors inline-flex items-center justify-center gap-2 w-55 md:w-auto"
+            >
+              <div className="flex gap-4 items-center">
+                <FaPhone className="w-4 h-4 opacity-80" />
+                <span className="font-semibold text-[16px]">
+                  Talk to an Expert
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </div>

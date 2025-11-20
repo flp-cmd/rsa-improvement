@@ -15,16 +15,18 @@ export default function Home() {
   return (
     <>
       <Header />
-      <HeroSection />
-      <AboutUs />
-      <WhyRSA />
-      <HowItWorks />
-      <Services />
-      <RecentProjects />
-      <Testimonials />
-      <Contact />
-      <FAQ />
-      <CTASection />
+      <div className="flex gap-25 md:gap-40 flex-col">
+        <HeroSection />
+        <AboutUs />
+        <WhyRSA />
+        <HowItWorks />
+        <Services />
+        <RecentProjects />
+        <Testimonials />
+        <Contact />
+        <FAQ />
+        <CTASection />
+      </div>
       <Footer />
     </>
   );
