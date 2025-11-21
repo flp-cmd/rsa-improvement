@@ -39,15 +39,18 @@ export async function POST(request: Request) {
     const data = await response.json();
 
     if (data.success) {
-      return NextResponse.json({
-        success: true,
-        body: { message: data.message || "Message sent successfully!" },
-      });
+      return NextResponse.json(
+        {
+          success: true,
+          body: { message: "Message sent successfully!" },
+        },
+        { status: 200 }
+      );
     } else {
       return NextResponse.json(
         {
           success: false,
-          body: { message: data.message || "Failed to send message" },
+          body: { message: "Failed to send message. Please try again." },
         },
         { status: 400 }
       );

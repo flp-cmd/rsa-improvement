@@ -2,6 +2,7 @@
 
 import { faqs } from "@/utils/data";
 import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(20);
@@ -57,13 +58,24 @@ export default function FAQ() {
                   {openIndex === index ? "−" : "+"}
                 </span>
               </button>
-              {openIndex === index && faq.answer && (
-                <div className="px-4 md:px-6 pb-4 md:pb-6">
-                  <p className="text-white text-sm md:text-base leading-relaxed tracking-wide">
-                    {faq.answer}
-                  </p>
-                </div>
-              )}
+
+              <AnimatePresence initial={false}>
+                {openIndex === index && faq.answer && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-4 md:px-6 pb-4 md:pb-6">
+                      <p className="text-white text-sm md:text-base leading-relaxed tracking-wide">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>

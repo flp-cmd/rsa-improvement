@@ -28,7 +28,6 @@ export default function Header() {
                 height={120}
                 preload
                 loading="eager"
-                objectFit="contain"
                 className="h-22 md:h-30 w-auto"
               />
             </a>

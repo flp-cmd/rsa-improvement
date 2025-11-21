@@ -145,13 +145,13 @@ export default function HeroSection() {
         }
       } else {
         const errorMessage =
-          data.body?.message ?? "Error: Failed to send message";
+          data.body?.message ?? "Failed to send message. Please try again.";
         setResult(errorMessage);
         setResultType("error");
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      setResult("Error: Failed to send message. Please try again.");
+      setResult("Failed to send message. Please try again.");
       setResultType("error");
     } finally {
       setIsLoading(false);
@@ -184,7 +184,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="relative">
           <div className="pt-8 pb-4 text-center md:text-start md:pb-0 relative z-10">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">
               <span className="text-(--modern-green) font-black">
                 Transforming
               </span>{" "}
@@ -359,7 +359,6 @@ export default function HeroSection() {
               src="/flooring.jpg"
               alt="Flooring"
               fill
-              objectFit="cover"
               preload
               loading="eager"
               className="relative w-full"
