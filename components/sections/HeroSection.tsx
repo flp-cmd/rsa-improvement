@@ -94,17 +94,6 @@ export default function HeroSection() {
     setEmailError(false);
     setPhoneError(false);
 
-    const form = e.currentTarget;
-    const formDataObj = new FormData(form);
-    const accessKey = process.env.NEXT_PUBLIC_WEB_3_FORMS;
-
-    if (!accessKey) {
-      setResult("Error: API key not configured");
-      setResultType("error");
-      setIsLoading(false);
-      return;
-    }
-
     if (!isValidEmail(formData.email)) {
       setResult("Please enter a valid email!");
       setResultType("error");
@@ -121,12 +110,14 @@ export default function HeroSection() {
       return;
     }
 
-    formDataObj.append("access_key", accessKey);
-
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/send-form", {
         method: "POST",
-        body: formDataObj,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
@@ -136,32 +127,24 @@ export default function HeroSection() {
       const data = await response.json();
 
       if (data.success) {
-        setResult("Message sent successfully!");
+        setResult(data.body?.message ?? "Message sent successfully!");
         setResultType("success");
 
-        setTimeout(() => {
-          try {
-            if (formRef.current) {
-              formRef.current.reset();
-            }
-            setFormData({
-              name: "",
-              email: "",
-              phone: "",
-              service: "",
-              message: "",
-            });
-            setEmailError(false);
-            setPhoneError(false);
-            if (textareaRef.current) {
-              textareaRef.current.style.height = "auto";
-            }
-          } catch (resetError) {
-            console.error("Error resetting form:", resetError);
-          }
-        }, 100);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+        setEmailError(false);
+        setPhoneError(false);
+        if (textareaRef.current) {
+          textareaRef.current.style.height = "auto";
+        }
       } else {
-        const errorMessage = "Error: Failed to send message";
+        const errorMessage =
+          data.body?.message ?? "Error: Failed to send message";
         setResult(errorMessage);
         setResultType("error");
       }
@@ -173,8 +156,6 @@ export default function HeroSection() {
       setIsLoading(false);
     }
   };
-
-  const isSubmitDisabled = isLoading || !isFormValid;
 
   useEffect(() => {
     if (result) {
@@ -342,9 +323,9 @@ export default function HeroSection() {
 
                 <button
                   type="submit"
-                  disabled={isSubmitDisabled}
+                  disabled={!isFormValid || isLoading}
                   className={`w-full mx-auto bg-white text-(--modern-black) px-6 py-3 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2 ${
-                    isSubmitDisabled
+                    !isFormValid
                       ? "opacity-60 cursor-not-allowed"
                       : "cursor-pointer hover:bg-gray-300 hover:scale-105 group"
                   }`}
@@ -353,7 +334,7 @@ export default function HeroSection() {
                   {!isLoading && (
                     <svg
                       className={`w-5 h-5 transition-transform duration-300 ${
-                        isSubmitDisabled ? "" : "group-hover:translate-x-1"
+                        !isFormValid ? "" : "group-hover:translate-x-1"
                       }`}
                       fill="none"
                       stroke="currentColor"
