@@ -4,6 +4,7 @@ import "animate.css";
 import { useState, useRef, useEffect } from "react";
 import { isValidEmail, isValidUSPhone } from "@/utils/validators";
 import { services } from "@/utils/data";
+import Image from "next/image";
 
 export default function HeroSection() {
   const [result, setResult] = useState("");
@@ -353,17 +354,15 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="hidden md:block relative mt-8 md:mt-12">
-            <div
-              className="relative w-full h-[600px] md:h-[600px] lg:h-[600px] rounded-lg overflow-hidden"
-              style={{
-                backgroundImage: "url('/flooring.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className="absolute inset-0 bg-black/30"></div>
-            </div>
+          <div className="hidden md:block relative mt-8 md:mt-12 rounded-lg overflow-hidden">
+            <Image
+              src="/flooring.jpg"
+              alt="Flooring"
+              width={1920}
+              height={1080}
+              className="relative w-full h-[600px] md:h-[600px] lg:h-[600px] overflow-hidden object-cover"
+            />
+            <div className="absolute inset-0 bg-black/30"></div>
           </div>
         </div>
       </div>
