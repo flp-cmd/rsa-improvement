@@ -184,7 +184,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="relative">
           <div className="pt-8 pb-4 text-center md:text-start md:pb-0 relative z-10">
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
               <span className="text-(--modern-green) font-black">
                 Transforming
               </span>{" "}
@@ -354,16 +354,15 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="hidden md:block relative mt-8 md:mt-12 rounded-lg overflow-hidden">
+          <div className="hidden md:block relative mt-8 md:mt-12 rounded-lg overflow-hidden h-[600px]">
             <Image
               src="/flooring.jpg"
               alt="Flooring"
-              width={500}
-              height={500}
+              fill
               objectFit="cover"
               preload
               loading="eager"
-              className="relative w-full h-[600px] md:h-[600px] lg:h-[600px] overflow-hidden"
+              className="relative w-full"
             />
             <div className="absolute inset-0 bg-black/30"></div>
           </div>
