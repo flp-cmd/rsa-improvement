@@ -358,9 +358,12 @@ export default function HeroSection() {
             <Image
               src="/flooring.jpg"
               alt="Flooring"
-              width={1920}
-              height={1080}
-              className="relative w-full h-[600px] md:h-[600px] lg:h-[600px] overflow-hidden object-cover"
+              width={500}
+              height={500}
+              objectFit="cover"
+              preload
+              loading="eager"
+              className="relative w-full h-[600px] md:h-[600px] lg:h-[600px] overflow-hidden"
             />
             <div className="absolute inset-0 bg-black/30"></div>
           </div>

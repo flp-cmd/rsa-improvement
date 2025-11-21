@@ -31,9 +31,10 @@ export default function Testimonials() {
               <div className="flex gap-4">
                 <Image
                   src={item.image}
-                  alt={item.image}
+                  alt={item.name}
                   width={800}
                   height={800}
+                  quality={100}
                   className="w-[60px] h-[60px] rounded-full"
                 />
                 <div className="flex flex-col">

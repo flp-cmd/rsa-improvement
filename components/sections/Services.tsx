@@ -31,7 +31,7 @@ export default function Services() {
                       <div className="w-full md:w-1/2 h-64 md:h-80">
                         <Image
                           src={service.image}
-                          alt={service.title}
+                          alt={`${service.title} Image`}
                           width={800}
                           height={600}
                           className="w-full h-full object-cover"

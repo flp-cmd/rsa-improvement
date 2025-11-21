@@ -47,7 +47,6 @@ export const services = [
     title: "Flooring Installation/Repairs",
     description:
       "Expert flooring installation and repair services for hardwood, engineered flooring, laminate, and luxury vinyl (LVP/LVT). We deliver precise, high-quality results for residential and commercial spaces using premium materials and modern techniques. Count on our skilled team for durable, elegant, and functional floors that transform your space with lasting beauty.",
-    category: "Flooring Services",
     image: "/flooring-service.jpeg",
     highlighted: true,
   },
@@ -56,7 +55,6 @@ export const services = [
     title: "Finish/Refinish",
     description:
       "Revitalize your hardwood floors with our expert finishing and refinishing services. We sand, stain, and seal with precision to restore beauty, enhance durability, and match your desired style. Whether refreshing worn floors or protecting new ones, our team delivers smooth, long-lasting, and elegant results that elevate any space.",
-    category: "Flooring Services",
     highlighted: false,
     tags: ["Licensed Experts", "Water-Saving Solutions", "2+"],
   },
@@ -65,7 +63,6 @@ export const services = [
     title: "Demolition",
     description:
       "Remodeling your home starts with a clean slate. Demolition can be messy, complicated, and time-consuming—but it doesn't have to be. RSA Improvement provides professional, safe, and efficient demolition services to prepare your space for its beautiful future.",
-    category: "Indoor Repairs",
     highlighted: false,
   },
   {
@@ -73,7 +70,6 @@ export const services = [
     title: "Other Services",
     description:
       "Do you have a unique renovation idea? We are highly adaptable and experienced in executing a variety of specialized projects beyond our core offerings.",
-    category: "Custom & Finishing Work",
     highlighted: false,
   },
 ];
