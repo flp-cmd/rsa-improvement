@@ -115,7 +115,13 @@ export default function Footer() {
             <p className="text-gray-400 text-sm">
               Copyright © 2025 RSA Improvement
             </p>
-            <p className="text-gray-400 text-sm">Powered by RSA Improvement</p>
+            <a
+              href="https://github.com/flp-cmd"
+              target="_blank"
+              className="text-gray-400 text-sm"
+            >
+              Developed by Felipe Martinez
+            </a>
           </div>
         </div>
       </div>

@@ -47,7 +47,7 @@ export const services = [
     title: "Flooring Installation/Repairs",
     description:
       "Expert flooring installation and repair services for hardwood, engineered flooring, laminate, and luxury vinyl (LVP/LVT). We deliver precise, high-quality results for residential and commercial spaces using premium materials and modern techniques. Count on our skilled team for durable, elegant, and functional floors that transform your space with lasting beauty.",
-    image: "/flooring-service.jpeg",
+    image: "/flooring-service2.png",
     highlighted: true,
   },
   {
@@ -55,22 +55,22 @@ export const services = [
     title: "Finish/Refinish",
     description:
       "Revitalize your hardwood floors with our expert finishing and refinishing services. We sand, stain, and seal with precision to restore beauty, enhance durability, and match your desired style. Whether refreshing worn floors or protecting new ones, our team delivers smooth, long-lasting, and elegant results that elevate any space.",
-    highlighted: false,
-    tags: ["Licensed Experts", "Water-Saving Solutions", "2+"],
+    highlighted: true,
+    image: "/finish.png",
   },
   {
     number: "03",
     title: "Demolition",
     description:
       "Remodeling your home starts with a clean slate. Demolition can be messy, complicated, and time-consuming—but it doesn't have to be. RSA Improvement provides professional, safe, and efficient demolition services to prepare your space for its beautiful future.",
-    highlighted: false,
+    highlighted: true,
   },
   {
     number: "04",
     title: "Other Services",
     description:
       "Do you have a unique renovation idea? We are highly adaptable and experienced in executing a variety of specialized projects beyond our core offerings.",
-    highlighted: false,
+    highlighted: true,
   },
 ];
 
@@ -99,26 +99,26 @@ export const projects = [
 // Testimonials
 export const testimonials = [
   {
-    name: "Sarah M, Homeowner",
-    location: "Brooklyn, NY",
-    text: "RSA Improvement completely transformed my living room! Their team was punctual, respectful, and paid incredible attention to detail when painting and installing new flooring. The results exceeded my expectations — my home feels brand new again. I highly recommend them for anyone looking for quality workmanship and reliable service.",
-    date: "June 07, 2025",
+    name: "Sarah L. Williams",
+    location: "Newark, NJ",
+    text: "RSA Improvement completely transformed my living room! Their team was punctual, respectful, and paid incredible attention to detail when demolishing and installing new flooring. My home feels brand new again. I highly recommend them for anyone looking for quality workmanship and reliable service.",
     image: "/young-woman2.jpg",
+    color: "var(--modern-green)"
   },
   {
-    name: "David R, Property Manager",
-    location: "Newark, US",
-    text: "We've worked with RSA Improvement on multiple rental property renovations, and they've consistently delivered excellent results. From drywall repairs to custom trim work, everything is done efficiently and with care. It's rare to find a company that combines craftsmanship with such great communication. They're our go-to for any maintenance or upgrade projects.",
-    date: "May 15, 2024",
+    name: "Michael B. O'Connell",
+    location: "Brooklyn, NY",
+    text: "We've worked with RSA Improvement on multiple rental property renovations, and they've consistently delivered excellent results. From flooring to finish/refinish, everything is done efficiently and with care. It's rare to find a company that combines craftsmanship with such great communication. They're our go-to for any maintenance or upgrade projects.",
     image: "/front-view-man-working-as-real-estate-agent.jpg",
+    color: "var(--pale-blue)"
   },
   {
-    name: "Maria G, Business Owner",
-    location: "Queens, NY",
-    text: "RSA Improvement handled the flooring and painting for our office remodel, and the outcome was amazing. The crew was professional, tidy, and finished on schedule. The new look has made such a positive impression on our clients — I couldn't be happier with their service!",
-    date: "April 22, 2025",
+    name: "Jennifer M. Santoro",
+    location: "Jersey City, NJ",
+    text: "RSA handled the flooring for our office remodel, and the outcome was amazing. The crew was professional, tidy, and finished on schedule. The new look has made such a positive impression on our clients — I couldn't be happier with their service!",
     image:
       "/smiley-businesswoman-posing-outdoors-with-arms-crossed-copy-space.jpg",
+      color: "var(--pale-green)"
   },
 ];
 

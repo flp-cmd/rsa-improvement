@@ -51,20 +51,7 @@ export default function Services() {
                         <p className="text-gray-600 mb-4 leading-relaxed tracking-wider">
                           {service.description}
                         </p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {service.tags?.map((tag, tagIndex) => (
-                            <span
-                              key={tagIndex}
-                              className="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
                       </div>
-                      <button className="bg-(--harvest-gold)] text-white px-6 py-3 rounded-lg font-bold hover:bg-(--harvest-gold-hover)] transition-colors w-full md:w-auto">
-                        See Details
-                      </button>
                     </div>
                   </div>
                 </div>

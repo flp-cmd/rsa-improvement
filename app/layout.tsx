@@ -20,7 +20,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-US">
-      <body className={`${roboto.variable} antialiased`}>{children}</body>
+      <body className={`${roboto.variable} antialiased`}>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M7KZVWJR"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {children}
+      </body>
     </html>
   );
 }

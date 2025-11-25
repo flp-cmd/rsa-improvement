@@ -1,5 +1,4 @@
 import { testimonials } from "@/utils/data";
-import Image from "next/image";
 
 export default function Testimonials() {
   return (
@@ -29,14 +28,13 @@ export default function Testimonials() {
             >
               <p className="text-(--text-gray) text-sm">{`"${item.text}"`}</p>
               <div className="flex gap-4">
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  width={800}
-                  height={800}
-                  className="w-[60px] h-[60px] rounded-full"
-                />
-                <div className="flex flex-col">
+                <div
+                  className="w-[60px] h-[60px] rounded-full flex justify-center items-center text-3xl text-white"
+                  style={{ backgroundColor: item.color }}
+                >
+                  {item.name[0]}
+                </div>
+                <div className="flex flex-col justify-center">
                   <p className="text-(--rich-black) text-sm font-bold">
                     {item.name}
                   </p>
