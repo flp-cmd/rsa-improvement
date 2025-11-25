@@ -116,7 +116,7 @@ export default function Footer() {
               Copyright © 2025 RSA Improvement
             </p>
             <a
-              href="https://github.com/flp-cmd"
+              href="https://www.linkedin.com/in/felipe-martinez-0b8568261/"
               target="_blank"
               className="text-gray-400 text-sm"
             >

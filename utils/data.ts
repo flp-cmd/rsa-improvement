@@ -12,7 +12,7 @@ export const steps = [
     number: "2",
     title: "Get a Detailed Quote",
     description:
-      "Our team provides a clear, upfront estimate. You'll know exactly what to expect—no hidden costs, just honest pricing for materials and expert labor.",
+      "Our team provides a clear, upfront estimate. You'll know exactly what to expect, no hidden costs, just honest pricing for materials and expert labor.",
     highlighted: true,
     accentColor: "--pale-blue",
   },
@@ -47,8 +47,8 @@ export const services = [
     title: "Flooring Installation/Repairs",
     description:
       "Expert flooring installation and repair services for hardwood, engineered flooring, laminate, and luxury vinyl (LVP/LVT). We deliver precise, high-quality results for residential and commercial spaces using premium materials and modern techniques. Count on our skilled team for durable, elegant, and functional floors that transform your space with lasting beauty.",
-    image: "/flooring-service2.png",
     highlighted: true,
+    image: "/flooring-service2.png",
   },
   {
     number: "02",
@@ -64,6 +64,7 @@ export const services = [
     description:
       "Remodeling your home starts with a clean slate. Demolition can be messy, complicated, and time-consuming—but it doesn't have to be. RSA Improvement provides professional, safe, and efficient demolition services to prepare your space for its beautiful future.",
     highlighted: true,
+    image: "/demolish.png",
   },
   {
     number: "04",
@@ -71,6 +72,7 @@ export const services = [
     description:
       "Do you have a unique renovation idea? We are highly adaptable and experienced in executing a variety of specialized projects beyond our core offerings.",
     highlighted: true,
+    image: "/painting.png"
   },
 ];
 
@@ -103,14 +105,14 @@ export const testimonials = [
     location: "Newark, NJ",
     text: "RSA Improvement completely transformed my living room! Their team was punctual, respectful, and paid incredible attention to detail when demolishing and installing new flooring. My home feels brand new again. I highly recommend them for anyone looking for quality workmanship and reliable service.",
     image: "/young-woman2.jpg",
-    color: "var(--modern-green)"
+    color: "var(--modern-green)",
   },
   {
     name: "Michael B. O'Connell",
     location: "Brooklyn, NY",
     text: "We've worked with RSA Improvement on multiple rental property renovations, and they've consistently delivered excellent results. From flooring to finish/refinish, everything is done efficiently and with care. It's rare to find a company that combines craftsmanship with such great communication. They're our go-to for any maintenance or upgrade projects.",
     image: "/front-view-man-working-as-real-estate-agent.jpg",
-    color: "var(--pale-blue)"
+    color: "var(--pale-blue)",
   },
   {
     name: "Jennifer M. Santoro",
@@ -118,7 +120,7 @@ export const testimonials = [
     text: "RSA handled the flooring for our office remodel, and the outcome was amazing. The crew was professional, tidy, and finished on schedule. The new look has made such a positive impression on our clients — I couldn't be happier with their service!",
     image:
       "/smiley-businesswoman-posing-outdoors-with-arms-crossed-copy-space.jpg",
-      color: "var(--pale-green)"
+    color: "var(--pale-green)",
   },
 ];
 

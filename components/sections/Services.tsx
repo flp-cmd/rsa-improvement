@@ -24,52 +24,69 @@ export default function Services() {
         <div className="space-y-8">
           {services.map((service, index) => (
             <div key={index}>
-              {service.highlighted ? (
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <div className="flex flex-col md:flex-row">
-                    {service.image && (
-                      <div className="w-full md:w-1/2 h-64 md:h-80">
-                        <Image
-                          src={service.image}
-                          alt={`${service.title} Image`}
-                          width={800}
-                          height={600}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    )}
-                    <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
-                      <div>
-                        <div className="flex items-center gap-4 mb-4">
-                          <span className="text-2xl font-bold text-gray-400">
-                            {service.number}
-                          </span>
-                          <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                            {service.title}
-                          </h3>
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="flex flex-col md:flex-row">
+                  {index % 2 === 0 ? (
+                    <>
+                      {service.image && (
+                        <div className="w-full md:w-1/2 h-64 md:h-70 order-1">
+                          <Image
+                            src={service.image}
+                            alt={`${service.title} Image`}
+                            width={800}
+                            height={600}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
-                        <p className="text-gray-600 mb-4 leading-relaxed tracking-wider">
-                          {service.description}
-                        </p>
+                      )}
+                      <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between order-2">
+                        <div>
+                          <div className="flex items-center gap-4 mb-4">
+                            <span className="text-2xl font-bold text-gray-400">
+                              {service.number}
+                            </span>
+                            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                              {service.title}
+                            </h3>
+                          </div>
+                          <p className="text-gray-600 mb-4 leading-relaxed tracking-wider">
+                            {service.description}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between order-2 md:order-1">
+                        <div>
+                          <div className="flex items-center gap-4 mb-4">
+                            <span className="text-2xl font-bold text-gray-400">
+                              {service.number}
+                            </span>
+                            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                              {service.title}
+                            </h3>
+                          </div>
+                          <p className="text-gray-600 mb-4 leading-relaxed tracking-wider">
+                            {service.description}
+                          </p>
+                        </div>
+                      </div>
+                      {service.image && (
+                        <div className="w-full md:w-1/2 h-64 md:h-80 order-1 md:order-2">
+                          <Image
+                            src={service.image}
+                            alt={`${service.title} Image`}
+                            width={800}
+                            height={600}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      )}
+                    </>
+                  )}
                 </div>
-              ) : (
-                <div className="flex items-start gap-4 md:gap-6">
-                  <span className="text-2xl md:text-3xl font-bold text-gray-400 shrink-0">
-                    {service.number}
-                  </span>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 text-base md:text-lg leading-relaxed tracking-wider">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

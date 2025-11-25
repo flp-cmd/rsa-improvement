@@ -1,5 +1,5 @@
 import Image from "next/image";
-import QuoteImage from "../.././public/quote-image.jpeg";
+import GeneralService from "../../public/general-service.png"
 
 export default function CTASection() {
   return (
@@ -9,7 +9,7 @@ export default function CTASection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             <div className="h-64 md:h-80 lg:h-auto">
               <Image
-                src={QuoteImage}
+                src={GeneralService}
                 alt="Professional repair service"
                 className="w-full h-full object-cover"
               />
