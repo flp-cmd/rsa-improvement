@@ -77,20 +77,20 @@ export const services = [
 // Projects
 export const projects = [
   {
-    title: "Kitchen Exhaust Repair & Maintenance",
+    title: "Custom LVP Flooring Upgrade for Limousine",
     description:
-      "Successfully fixed and optimized the kitchen exhaust system to improve airflow, reduce heat buildup, and enhance overall ventilation and performance, ensuring a cleaner and more comfortable cooking environment.",
-    year: "2025",
-    location: "Los Angeles, CA",
+      "We removed this limousine's old carpet and installed a custom-fit LVP floor. The new surface provides a modern look, improved durability, and easy maintenance, perfectly tailored around all seat mounts and interior details.",
+    year: "2022",
+    location: "Jersey City, NJ",
     beforeImage: "/before1.jpg",
     afterImage: "/after1.jpg",
   },
   {
-    title: "Kitchen Water Tap Replacement & Leak Fix",
+    title: "Floating LVP Installation in a Jersey City Basement",
     description:
-      "We repaired a leaking kitchen tap and upgraded it with a modern, water-saving fixture, improving efficiency, preventing future leaks, and giving the sink area a cleaner, refreshed look.",
-    year: "2025",
-    location: "New York, NY",
+      "We replaced this old basement tile with a new floating LVP floor, giving the space a clean, modern look with better durability, comfort, and easy maintenance.",
+    year: "2021",
+    location: "Jersey City, NJ",
     beforeImage: "/before2.jpg",
     afterImage: "/after2.jpg",
   },

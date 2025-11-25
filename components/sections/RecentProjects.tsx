@@ -24,10 +24,7 @@ export default function RecentProjects() {
 
         <div className="grid grid-cols-1 gap-6 md:gap-8">
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-            >
+            <div key={index} className="bg-white overflow-hidden">
               <div className="flex flex-col xl:flex-row">
                 <div className="w-full md:w-full p-4 md:p-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
