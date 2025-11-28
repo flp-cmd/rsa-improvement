@@ -1,3 +1,5 @@
+"use client"
+
 import { services } from "@/utils/data";
 import Image from "next/image";
 

@@ -1,3 +1,5 @@
+"use client"
+
 import { projects } from "@/utils/data";
 import Image from "next/image";
 

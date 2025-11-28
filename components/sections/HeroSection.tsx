@@ -112,18 +112,17 @@ export default function HeroSection() {
     }
 
     try {
-      const response = await fetch("/api/send-form", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+        }),
       });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
 
       const data = await response.json();
 
