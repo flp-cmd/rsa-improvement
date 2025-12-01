@@ -355,6 +355,7 @@ export default function HeroSection() {
               src="/flooring.jpg"
               alt="Flooring"
               loading="eager"
+              fetchPriority="high"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/30"></div>
