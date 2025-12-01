@@ -1,5 +1,3 @@
-"use client"
-
 import { testimonials } from "@/utils/data";
 
 export default function Testimonials() {

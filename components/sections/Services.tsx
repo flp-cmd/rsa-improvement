@@ -1,7 +1,4 @@
-"use client"
-
 import { services } from "@/utils/data";
-import Image from "next/image";
 
 export default function Services() {
   return (
@@ -32,11 +29,9 @@ export default function Services() {
                     <>
                       {service.image && (
                         <div className="w-full md:w-1/2 h-64 md:h-70 order-1">
-                          <Image
+                          <img
                             src={service.image}
                             alt={`${service.title} Image`}
-                            width={800}
-                            height={600}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -76,11 +71,9 @@ export default function Services() {
                       </div>
                       {service.image && (
                         <div className="w-full md:w-1/2 h-64 md:h-80 order-1 md:order-2">
-                          <Image
+                          <img
                             src={service.image}
                             alt={`${service.title} Image`}
-                            width={800}
-                            height={600}
                             className="w-full h-full object-cover"
                           />
                         </div>

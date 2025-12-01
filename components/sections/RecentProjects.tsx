@@ -1,7 +1,4 @@
-"use client"
-
 import { projects } from "@/utils/data";
-import Image from "next/image";
 
 export default function RecentProjects() {
   return (
@@ -34,24 +31,20 @@ export default function RecentProjects() {
                       <span className="absolute top-3 left-3 bg-black/70 text-white text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full z-10 pointer-events-none">
                         Before
                       </span>
-                      <Image
+                      <img
                         src={project.beforeImage}
                         alt={`${project.title} before service`}
                         className="w-full h-56 md:h-100 object-cover transition-transform duration-300 group-hover:scale-105"
-                        width={600}
-                        height={450}
                       />
                     </div>
                     <div className="relative group rounded-xl overflow-hidden shadow-md">
                       <span className="absolute top-3 left-3 bg-(--harvest-gold) text-white text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full z-10 pointer-events-none">
                         After
                       </span>
-                      <Image
+                      <img
                         src={project.afterImage}
                         alt={`${project.title} after service`}
                         className="w-full h-56 md:h-100 object-cover transition-transform duration-300 group-hover:scale-105"
-                        width={600}
-                        height={450}
                       />
                     </div>
                   </div>

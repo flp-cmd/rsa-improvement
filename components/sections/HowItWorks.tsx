@@ -1,5 +1,3 @@
-"use client"
-
 import { steps } from "@/utils/data";
 import { FaPhone } from "react-icons/fa";
 

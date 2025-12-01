@@ -1,8 +1,3 @@
-"use client"
-
-import Image from "next/image";
-import GeneralService from "../../public/general-service.png"
-
 export default function CTASection() {
   return (
     <section className="bg-white">
@@ -10,8 +5,8 @@ export default function CTASection() {
         <div className="bg-(--harvest-gold) rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             <div className="h-64 md:h-80 lg:h-auto">
-              <Image
-                src={GeneralService}
+              <img
+                src="/general-service.png"
                 alt="Professional repair service"
                 className="w-full h-full object-cover"
               />

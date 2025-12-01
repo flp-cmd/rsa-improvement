@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
@@ -21,12 +18,9 @@ export default function Header() {
         <div className="hidden md:flex items-center justify-between h-16 md:h-20">
           <div className="hidden md:flex gap-6">
             <a href="#home">
-              <Image
+              <img
                 src="/rsa-improvement-logo.png"
                 alt="RSA Logo"
-                width={120}
-                height={120}
-                preload
                 loading="eager"
                 className="h-22 md:h-30 w-auto"
               />
@@ -105,11 +99,9 @@ export default function Header() {
             )}
           </button>
 
-          <Image
+          <img
             src="/rsa-improvement-logo.png"
             alt="RSA Logo"
-            width={500}
-            height={500}
             className="h-22 md:h-30 w-auto absolute left-1/2 -translate-x-1/2"
           />
         </div>

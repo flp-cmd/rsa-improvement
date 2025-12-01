@@ -1,5 +1,3 @@
-"use client";
-
 import { faqs } from "@/utils/data";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";

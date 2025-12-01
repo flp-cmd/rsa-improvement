@@ -1,10 +1,7 @@
-"use client";
-
 import "animate.css";
 import { useState, useRef, useEffect } from "react";
 import { isValidEmail, isValidUSPhone } from "@/utils/validators";
 import { services } from "@/utils/data";
-import Image from "next/image";
 
 export default function HeroSection() {
   const [result, setResult] = useState("");
@@ -354,13 +351,11 @@ export default function HeroSection() {
           </div>
 
           <div className="hidden md:block relative mt-8 md:mt-12 rounded-lg overflow-hidden h-[600px]">
-            <Image
+            <img
               src="/flooring.jpg"
               alt="Flooring"
-              fill
-              preload
               loading="eager"
-              className="relative w-full"
+              className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/30"></div>
           </div>
