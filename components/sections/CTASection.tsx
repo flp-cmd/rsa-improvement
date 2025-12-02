@@ -6,7 +6,7 @@ export default function CTASection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             <div className="h-64 md:h-80 lg:h-auto">
               <img
-                src="/general-service.png"
+                src="/cta-image.png"
                 alt="Professional repair service"
                 className="w-full h-full object-cover"
               />

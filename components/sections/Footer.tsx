@@ -51,10 +51,11 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#testimonials"
+                  href="https://docs.google.com/document/d/e/2PACX-1vR9wx7I4uOe9Y9m0WmvmMra9SoXdN3R4Y-anFqoaQ8cHFWM62DQDNULxddGM2fYr4MOZp5p2EC1HRKf/pub"
                   className="text-gray-400 hover:text-white transition-colors"
+                  target="_blank"
                 >
-                  Testimonials
+                  Privacy Policy
                 </Link>
               </li>
             </ul>

@@ -2,6 +2,7 @@ import "animate.css";
 import { useState, useRef, useEffect } from "react";
 import { isValidEmail, isValidUSPhone } from "@/utils/validators";
 import { services } from "@/utils/data";
+import Link from "next/link";
 
 export default function HeroSection() {
   const [result, setResult] = useState("");
@@ -9,6 +10,7 @@ export default function HeroSection() {
   const [isLoading, setIsLoading] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [phoneError, setPhoneError] = useState(false);
+  const [checkboxChecked, setCheckboxChecked] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -55,7 +57,8 @@ export default function HeroSection() {
     formData.email.trim() !== "" &&
     formData.phone.trim() !== "" &&
     formData.service.trim() !== "" &&
-    formData.message.trim() !== "";
+    formData.message.trim() !== "" &&
+    checkboxChecked;
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -134,6 +137,7 @@ export default function HeroSection() {
           service: "",
           message: "",
         });
+        setCheckboxChecked(false);
         setEmailError(false);
         setPhoneError(false);
         if (textareaRef.current) {
@@ -316,6 +320,46 @@ export default function HeroSection() {
                     className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white resize-none overflow-hidden"
                     style={{ minHeight: "48px" }}
                   />
+                </div>
+
+                <div className="flex gap-3 items-center">
+                  <div className="relative flex items-center">
+                    <input
+                      type="checkbox"
+                      id="checkbox"
+                      checked={checkboxChecked}
+                      onChange={(e) => setCheckboxChecked(e.target.checked)}
+                      className="cursor-pointer w-5 h-5 appearance-none rounded border-2 border-white/80 bg-white/10 checked:bg-white checked:border-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50"
+                    />
+                    {checkboxChecked && (
+                      <svg
+                        className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 text-gray-900 pointer-events-none"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={3}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    )}
+                  </div>
+                  <label
+                    htmlFor="checkbox"
+                    className="text-white/90 text-sm md:text-lg cursor-pointer flex-1"
+                  >
+                    I have read and agree to the{" "}
+                    <Link
+                      target="_blank"
+                      href="https://docs.google.com/document/d/e/2PACX-1vR9wx7I4uOe9Y9m0WmvmMra9SoXdN3R4Y-anFqoaQ8cHFWM62DQDNULxddGM2fYr4MOZp5p2EC1HRKf/pub"
+                      className="text-white/90 font-semibold underline"
+                    >
+                      privacy policy
+                    </Link>
+                  </label>
                 </div>
 
                 <button
