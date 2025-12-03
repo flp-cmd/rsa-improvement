@@ -1,12 +1,29 @@
 import { FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
+import { ReactNode } from "react";
+
+type ContactItem =
+  | {
+      icon: ReactNode;
+      label: string;
+      value: string;
+      isPhone: true;
+      accentColor: string;
+    }
+  | {
+      icon: ReactNode;
+      label: string;
+      value: string;
+      link: string | null;
+      accentColor: string;
+    };
 
 export default function Contact() {
-  const contactInfo = [
+  const contactInfo: ContactItem[] = [
     {
       icon: <FaPhone className="w-6 h-6" />,
       label: "Phone",
       value: "(862) 237-4628",
-      link: "sms:+18622374628",
+      isPhone: true,
       accentColor: "--pale-green",
     },
     {
@@ -56,7 +73,22 @@ export default function Contact() {
                 {item.icon}
               </div>
               <p className="text-gray-500 text-sm mb-2">{item.label}</p>
-              {item.link ? (
+              {"isPhone" in item && item.isPhone ? (
+                <>
+                  <a
+                    href="sms:+18622374628"
+                    className="block md:hidden text-xl md:text-2xl font-bold text-gray-900 hover:text-(--pale-green) transition-colors wrap-break-word overflow-wrap-anywhere"
+                  >
+                    {item.value}
+                  </a>
+                  <a
+                    href="tel:+18622374628"
+                    className="hidden md:block text-xl md:text-2xl font-bold text-gray-900 hover:text-(--pale-green) transition-colors wrap-break-word overflow-wrap-anywhere"
+                  >
+                    {item.value}
+                  </a>
+                </>
+              ) : "link" in item && item.link ? (
                 <a
                   href={item.link}
                   className="text-xl md:text-2xl font-bold text-gray-900 hover:text-(--pale-green) transition-colors wrap-break-word overflow-wrap-anywhere"

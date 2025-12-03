@@ -68,7 +68,13 @@ export default function Footer() {
                 <FaPhone className="w-5 h-5 text-(--harvest-gold) mt-1 shrink-0 opacity-90" />
                 <a
                   href="sms:+18622374628"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="block md:hidden text-gray-400 hover:text-white transition-colors"
+                >
+                  (862) 237-4628
+                </a>
+                <a
+                  href="tel:+18622374628"
+                  className="hidden md:block text-gray-400 hover:text-white transition-colors"
                 >
                   (862) 237-4628
                 </a>
