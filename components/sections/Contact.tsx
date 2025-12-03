@@ -6,7 +6,7 @@ export default function Contact() {
       icon: <FaPhone className="w-6 h-6" />,
       label: "Phone",
       value: "(862) 237-4628",
-      link: "tel:+18622374628",
+      link: "sms:+18622374628",
       accentColor: "--pale-green",
     },
     {

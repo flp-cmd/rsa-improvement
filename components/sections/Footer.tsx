@@ -67,7 +67,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <FaPhone className="w-5 h-5 text-(--harvest-gold) mt-1 shrink-0 opacity-90" />
                 <a
-                  href="tel:+18622374628"
+                  href="sms:+18622374628"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   (862) 237-4628
